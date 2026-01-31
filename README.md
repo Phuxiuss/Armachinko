@@ -11,7 +11,7 @@ Armachinko was created as part of a student project at [School4Games](https://ww
 Play the game on [Itch.io](https://s4g.itch.io/armachinko)!
 
 ## Responsibilities
-I worked as a Game Engineer, mainly responsible for gameplay aspects and UI of this game.
+I worked as a Game Engineer, primarily responsible for gameplay aspects and the game’s UI, such as feature implementation, enemy behavior and the development of menu systems (main menu, pause menu, settings, etc.).
 
 ## Highlights
 - Enemy
