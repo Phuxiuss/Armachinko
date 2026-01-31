@@ -10,11 +10,13 @@ Play the game on [Itch.io](https://s4g.itch.io/armachinko)!
 
 ## Responsibilities
 
+## Highlights
 
 ## Built With
 - **GDScript** (Core Language)
 - **Godot** (Game Engine)
 - **TortoiseHG** (Version Control)
+  
 ---
 <img width="397" height="209" alt="image" src="https://github.com/user-attachments/assets/370334b3-fd65-428a-b40b-d68683b6723b" />
 <img width="397" height="209" alt="image" src="https://github.com/user-attachments/assets/0edc4322-1f95-466e-8ffe-02c9822e1bfb" />
