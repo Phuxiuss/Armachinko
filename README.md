@@ -11,14 +11,16 @@ Armachinko was created as part of a student project at [School4Games](https://ww
 Play the game on [Itch.io](https://s4g.itch.io/armachinko)!
 
 ## Responsibilities
+I worked as a Game Engineer, mainly responsible for gameplay aspects and UI of this game.
 
 ## Highlights
+- Enemy
+- Main Menu, Pause Menu
 
 ## Built With
 - **GDScript** (Core Language)
 - **Godot** (Game Engine)
 - **TortoiseHG** (Version Control)
-  
 ---
 <p align="center">
 <img width="397" height="209" alt="image" src="https://github.com/user-attachments/assets/370334b3-fd65-428a-b40b-d68683b6723b" />
