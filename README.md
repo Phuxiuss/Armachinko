@@ -7,7 +7,6 @@ Set in the Wild West, you play an Armadillo with a Shotgun.
 Bounce between control and chaos on a whacky chase for the Highscore.**
 
 Armachinko was created as part of a student project at [School4Games](https://www.school4games.net/) during early 2025.
-
 Play the game on [Itch.io](https://s4g.itch.io/armachinko)!
 
 ## Responsibilities
