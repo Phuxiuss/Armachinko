@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dt64owefeldvj"]
+
+[ext_resource type="PackedScene" uid="uid://cy5wmn1orw05" path="res://features/pins/coins/coin_barrel_pin.tscn" id="1_y4x5h"]
+[ext_resource type="ArrayMesh" uid="uid://brvqhnd6s7v06" path="res://assets/3D/meshes/silver_coin_mesh.res" id="2_6iiop"]
+[ext_resource type="PackedScene" uid="uid://0s705wvpcu3t" path="res://assets/3D/asset_scene_files/silver_barrel_model.tscn" id="2_cy1iw"]
+
+[node name="SilverCoinBarrelPin" instance=ExtResource("1_y4x5h")]
+
+[node name="Model" parent="." index="2" instance=ExtResource("2_cy1iw")]
+
+[node name="GPUParticles3D" parent="." index="3"]
+draw_pass_1 = ExtResource("2_6iiop")

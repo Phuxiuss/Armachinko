@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cirg2cmfv1x7k"]
+
+[ext_resource type="PackedScene" uid="uid://cy5wmn1orw05" path="res://features/pins/coins/coin_barrel_pin.tscn" id="1_2klsk"]
+[ext_resource type="PackedScene" uid="uid://ckcchgj4s78x0" path="res://assets/3D/asset_scene_files/copper_barrel_model.tscn" id="3_pydpi"]
+[ext_resource type="ArrayMesh" uid="uid://cdnnx7k3k0r1v" path="res://assets/3D/meshes/copper_coin_mesh.res" id="3_q3d6q"]
+
+[node name="CopperCoinBarrelPin" instance=ExtResource("1_2klsk")]
+
+[node name="Model" parent="." index="2" instance=ExtResource("3_pydpi")]
+
+[node name="GPUParticles3D" parent="." index="3"]
+draw_pass_1 = ExtResource("3_q3d6q")

@@ -1,0 +1,57 @@
+[gd_resource type="VisualShader" format=3 uid="uid://csa1ngv86saay"]
+
+[ext_resource type="Texture2D" uid="uid://qtulcxqtc806" path="res://assets/2D/textures/fire/Ashe_Circular.png" id="1_0yyg4"]
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_oac04"]
+default_input_values = [0, Quaternion(0, 0, 0, 0)]
+op_type = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_de6uy"]
+parameter_name = "ColorParameter"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_nh4lf"]
+expanded_output_ports = [0]
+source = 5
+texture = ExtResource("1_0yyg4")
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_krnk7"]
+parameter_name = "Hit_Texture"
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_mr4rm"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
+op_type = 2
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_tbwp5"]
+default_input_values = [0, Quaternion(0, 0, 0, 0)]
+op_type = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_uqw6x"]
+operator = 2
+
+[sub_resource type="VisualShaderNodeBillboard" id="VisualShaderNodeBillboard_qcxew"]
+billboard_type = 3
+keep_scale = true
+
+[resource]
+flags/depth_test_disabled = true
+flags/unshaded = true
+flags/shadows_disabled = true
+nodes/vertex/2/node = SubResource("VisualShaderNodeBillboard_qcxew")
+nodes/vertex/2/position = Vector2(-500, 620)
+nodes/vertex/connections = PackedInt32Array(2, 0, 0, 10)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_nh4lf")
+nodes/fragment/2/position = Vector2(-1980, 880)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_krnk7")
+nodes/fragment/3/position = Vector2(-3000, 520)
+nodes/fragment/5/node = SubResource("VisualShaderNodeVectorOp_mr4rm")
+nodes/fragment/5/position = Vector2(-600, 40)
+nodes/fragment/8/node = SubResource("VisualShaderNodeVectorDecompose_tbwp5")
+nodes/fragment/8/position = Vector2(-1580, 320)
+nodes/fragment/9/node = SubResource("VisualShaderNodeFloatOp_uqw6x")
+nodes/fragment/9/position = Vector2(-350.002, 1050.78)
+nodes/fragment/10/node = SubResource("VisualShaderNodeVectorDecompose_oac04")
+nodes/fragment/10/position = Vector2(-1180, 1480)
+nodes/fragment/11/node = SubResource("VisualShaderNodeColorParameter_de6uy")
+nodes/fragment/11/position = Vector2(-2320, -200)
+nodes/fragment/connections = PackedInt32Array(3, 0, 2, 2, 2, 0, 5, 1, 5, 0, 0, 0, 8, 3, 9, 0, 2, 0, 10, 0, 10, 0, 9, 1, 9, 0, 0, 1, 11, 0, 8, 0, 11, 0, 5, 0)

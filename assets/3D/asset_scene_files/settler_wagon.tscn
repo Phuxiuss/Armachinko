@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cndqhr50111t2"]
+
+[ext_resource type="Material" uid="uid://il0k1v4rf724" path="res://assets/3d/materials/outline_9mm.tres" id="1_0pd77"]
+[ext_resource type="ArrayMesh" uid="uid://3pd7jqj70ejb" path="res://assets/3d/meshes/extracted_via_script/settler_wagon_wooden_cart_mesh.res" id="2_ylwf6"]
+[ext_resource type="ArrayMesh" uid="uid://b8ddq3yf0oslk" path="res://assets/3d/meshes/extracted_via_script/settler_wagon_cart_coloured_planks_mesh.res" id="3_npw35"]
+[ext_resource type="ArrayMesh" uid="uid://bfc3ntk6pwrly" path="res://assets/3d/meshes/extracted_via_script/settler_wagon_front_axle_mesh.res" id="4_7rte4"]
+
+[node name="SettlerWagon" type="Node3D" unique_id=1785984815]
+
+[node name="wooden_cart" type="MeshInstance3D" parent="." unique_id=367396783]
+material_overlay = ExtResource("1_0pd77")
+mesh = ExtResource("2_ylwf6")
+skeleton = NodePath("")
+
+[node name="cart_coloured_planks" type="MeshInstance3D" parent="wooden_cart" unique_id=1041412370]
+material_overlay = ExtResource("1_0pd77")
+mesh = ExtResource("3_npw35")
+skeleton = NodePath("")
+
+[node name="front_axle" type="MeshInstance3D" parent="wooden_cart" unique_id=1787025995]
+material_overlay = ExtResource("1_0pd77")
+mesh = ExtResource("4_7rte4")
+skeleton = NodePath("")

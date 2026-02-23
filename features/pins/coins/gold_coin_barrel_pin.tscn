@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://desp22rsq3u2c"]
+
+[ext_resource type="PackedScene" uid="uid://cy5wmn1orw05" path="res://features/pins/coins/coin_barrel_pin.tscn" id="1_dckls"]
+[ext_resource type="PackedScene" uid="uid://c61tb2ysuyyxc" path="res://assets/3D/asset_scene_files/gold_barrel_model.tscn" id="2_jbtuv"]
+
+[node name="GoldCoinBarrelPin" instance=ExtResource("1_dckls")]
+
+[node name="Model" parent="." index="2" instance=ExtResource("2_jbtuv")]

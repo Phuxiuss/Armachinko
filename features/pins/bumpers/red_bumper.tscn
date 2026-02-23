@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5uafep3nealx"]
+
+[ext_resource type="PackedScene" uid="uid://cmckhrlvylkfb" path="res://features/pins/bumpers/cactus_bumper.tscn" id="1_e4pjn"]
+[ext_resource type="ArrayMesh" uid="uid://dw5w51pa1nxkj" path="res://assets/3d/meshes/round_cactus_red_mesh.res" id="2_8633h"]
+
+[node name="Bumper" instance=ExtResource("1_e4pjn")]
+
+[node name="Model" parent="." index="1"]
+mesh = ExtResource("2_8633h")
