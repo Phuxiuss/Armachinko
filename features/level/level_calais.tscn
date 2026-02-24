@@ -38,7 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://bkpvi727r75qw" path="res://assets/3D/asset_scene_files/setdressing/box_1.tscn" id="29_kldai"]
 [ext_resource type="PackedScene" uid="uid://y6higvoxq8vc" path="res://assets/3D/asset_scene_files/setdressing/box_2.tscn" id="30_0wiel"]
 [ext_resource type="PackedScene" uid="uid://b0q4ftb14axb3" path="res://assets/3D/asset_scene_files/fences/gerald/9_18_left_long_inner_circle.tscn" id="30_ihf5a"]
-[ext_resource type="PackedScene" uid="uid://cxv3gyu60pnyq" path="res://features/UI/main_ui.tscn" id="30_j4qyo"]
+[ext_resource type="PackedScene" uid="uid://cxv3gyu60pnyq" path="res://features/UI/in_game/main_ui.tscn" id="30_j4qyo"]
 [ext_resource type="PackedScene" uid="uid://xuisio2ctiar" path="res://assets/3D/asset_scene_files/setdressing/box_3.tscn" id="31_gssfw"]
 [ext_resource type="PackedScene" uid="uid://bdw0p3k86wam6" path="res://assets/3D/asset_scene_files/fences/gerald/6_12_right_long_inner_circle.tscn" id="31_qb7io"]
 [ext_resource type="PackedScene" uid="uid://bgre8nmh2ywnc" path="res://features/pins/bumpers/onesided_bumper.tscn" id="32_f4djd"]
@@ -2961,7 +2961,7 @@ boss = NodePath("MamaEagle_2")
 despawn_on_start = true
 
 [node name="MamaEagle_" parent="MeshPlane/LevelParts/BossPinPart" unique_id=748109526 instance=ExtResource("17_uyid2")]
-transform = Transform3D(0.7686861, 0.6214813, -0.15127133, -0.63962674, 0.7468796, -0.18179347, 2.1606691e-07, 0.23649919, 0.9716318, 139.126, -260.838, 27.0826)
+transform = Transform3D(0.7686861, 0.62148124, -0.15127133, -0.63962674, 0.7468795, -0.18179347, 2.1606691e-07, 0.23649916, 0.9716318, 139.126, -260.838, 27.0826)
 respawn_time = 180.0
 
 [node name="MamaEagle_2" parent="MeshPlane/LevelParts/BossPinPart" unique_id=2034001606 instance=ExtResource("17_uyid2")]
@@ -4083,12 +4083,12 @@ libraries/ = SubResource("AnimationLibrary_wwfpt")
 transform = Transform3D(0.13571627, 0.99074787, 0, -0.99074787, 0.13571627, 0, 0, 0, 1, 94.0856, -109.822, 0)
 
 [node name="RightDoorWing" parent="MeshPlane/LevelParts/DoorKeys/CoinPathKeyBumper/TopDoorWings" unique_id=2023261387 instance=ExtResource("26_qmejt")]
-transform = Transform3D(-0.078462966, 0.99691695, 0, -0.99691695, -0.078462966, 0, 0, 0, 1, 93.0949, -127.822, 0)
+transform = Transform3D(-0.07846296, 0.99691683, 0, -0.99691683, -0.07846296, 0, 0, 0, 1, 93.0949, -127.822, 0)
 
 [node name="BottomDoorWings" type="Node3D" parent="MeshPlane/LevelParts/DoorKeys/CoinPathKeyBumper" unique_id=517587849]
 
 [node name="LeftDoorWing" parent="MeshPlane/LevelParts/DoorKeys/CoinPathKeyBumper/BottomDoorWings" unique_id=800939898 instance=ExtResource("25_0kysc")]
-transform = Transform3D(0.9963449, -0.08541686, 0, 0.08541686, 0.9963449, 0, 0, 0, 1, 153, -277, 0)
+transform = Transform3D(0.9963448, -0.08541685, 0, 0.08541685, 0.9963448, 0, 0, 0, 1, 153, -277, 0)
 
 [node name="RightDoorWing" parent="MeshPlane/LevelParts/DoorKeys/CoinPathKeyBumper/BottomDoorWings" unique_id=1041948765 instance=ExtResource("26_qmejt")]
 transform = Transform3D(0.98927194, 0.14608331, 0, -0.14608331, 0.98927194, 0, 0, 0, 1, 171, -277, 0)
