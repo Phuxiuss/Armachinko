@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dmwh0gadj3tti" path="res://assets/2D/sprites/ui/icons/ui_controls_2.png" id="11_yylav"]
 [ext_resource type="Texture2D" uid="uid://b7ut2y2nnd2iw" path="res://assets/2D/sprites/ui/2d_sprites/ui_pause_wooden_post.png" id="12_esrad"]
 [ext_resource type="Texture2D" uid="uid://d3x0kmfb7er5t" path="res://assets/2D/sprites/ui/2d_sprites/ui_pause_score_screen.png" id="13_yeouf"]
-[ext_resource type="Theme" path="res://features/ui/menu/menu_theme.tres" id="14_syhfk"]
+[ext_resource type="Theme" uid="uid://dwjkcm1x4clvx" path="res://features/UI/main_menu/menu/menu_theme.tres" id="14_syhfk"]
 [ext_resource type="Texture2D" uid="uid://bmi3gn0lqu82" path="res://assets/2D/sprites/ui/2d_sprites/nail.png" id="15_8gry0"]
 [ext_resource type="Texture2D" uid="uid://c3vxmdf5djit5" path="res://assets/2D/sprites/ui/icons/ui_controls_controller.png" id="16_5a8ns"]
 [ext_resource type="Texture2D" uid="uid://qenc8dujkdsp" path="res://assets/2D/sprites/ui/icons/ui_controls_controller_2.png" id="17_qwimo"]
