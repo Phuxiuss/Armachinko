@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dbhvi5md007u1" path="res://features/pins/bumpers/cactus_bumper.gd" id="1_tw7lt"]
 [ext_resource type="PackedScene" uid="uid://bo64tack8j2qa" path="res://assets/3D/asset_scene_files/round_cactus.tscn" id="2_bcym7"]
-[ext_resource type="AudioStream" uid="uid://c1wepi3j2mcc0" path="res://assets/audio/cactus_collide_dummy_250122.mp3" id="3_vb6d1"]
+[ext_resource type="AudioStream" uid="uid://c1wepi3j2mcc0" path="res://assets/audio/bumpers/cactus_collide_dummy_250122.mp3" id="3_vb6d1"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="5_0sauh"]
 [ext_resource type="Material" uid="uid://uw25hel574ra" path="res://assets/3D/materials/emission_material.tres" id="5_glwqq"]
 [ext_resource type="Material" uid="uid://cspwybnhj6vl2" path="res://assets/3D/textures/gradient_texture.tres" id="6_lae7h"]

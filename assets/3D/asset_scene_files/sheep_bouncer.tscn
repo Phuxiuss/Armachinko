@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://pxfjcsrthrwh"]
 
-[ext_resource type="Material" uid="uid://il0k1v4rf724" path="res://assets/3d/materials/outline_9mm.tres" id="1_dyll6"]
-[ext_resource type="ArrayMesh" uid="uid://y5var5bidgk6" path="res://assets/3d/meshes/extracted_via_script/sheep_bouncer_sheep_mesh.res" id="2_i1sdg"]
-[ext_resource type="Animation" uid="uid://dnkib86vjwqo7" path="res://assets/animations/extracted_via_script/sheep_bouncer_sheep_bounce.res" id="3_35ma7"]
-[ext_resource type="Animation" uid="uid://bivki8o5jgyh8" path="res://assets/animations/extracted_via_script/sheep_bouncer_sheep_idle.res" id="4_0kpmr"]
+[ext_resource type="Material" uid="uid://il0k1v4rf724" path="res://assets/3D/materials/outline_9mm.tres" id="1_dyll6"]
+[ext_resource type="ArrayMesh" uid="uid://y5var5bidgk6" path="res://assets/3D/meshes/extracted_via_script/sheep_bouncer_sheep_mesh.res" id="2_i1sdg"]
+[ext_resource type="Animation" uid="uid://dnkib86vjwqo7" path="res://assets/animations/sheep_bouncer_sheep_bounce.res" id="3_35ma7"]
+[ext_resource type="Animation" uid="uid://bivki8o5jgyh8" path="res://assets/animations/sheep_bouncer_sheep_idle.res" id="4_0kpmr"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5uvqw"]
 _data = {

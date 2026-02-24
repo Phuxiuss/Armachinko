@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cljaj0qjcvlo0" path="res://features/pins/special/time_coin.gd" id="1_j5roq"]
 [ext_resource type="PackedScene" uid="uid://dik1jx33fibkt" path="res://assets/3D/asset_scene_files/clock.tscn" id="2_3n4lk"]
 [ext_resource type="Material" uid="uid://il0k1v4rf724" path="res://assets/3D/materials/outline_9mm.tres" id="3_hciuv"]
-[ext_resource type="AudioStream" uid="uid://jhv0khkx088h" path="res://assets/audio/clock_pickup.mp3" id="6_3so5l"]
+[ext_resource type="AudioStream" uid="uid://jhv0khkx088h" path="res://assets/audio/pickups/clock_pickup.mp3" id="6_3so5l"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2s0eq"]
 height = 5.93869

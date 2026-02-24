@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ignnns1rajfk" path="res://assets/2D/sprites/gun/shotgun_1.png" id="27_l2pkp"]
 [ext_resource type="Script" uid="uid://d1tvvmtuah13o" path="res://features/player/vfx/immediate_mesh.gd" id="28_b0qd2"]
 [ext_resource type="PackedScene" uid="uid://cxrdlyxbxuj3" path="res://features/player/player_debug_hud.tscn" id="29_dvu2q"]
-[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://assets/audio/sheepfence_hit.mp3" id="30_p38bc"]
+[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://assets/audio/bumpers/sheepfence_hit.mp3" id="30_p38bc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qbv1g"]
 friction = 0.5

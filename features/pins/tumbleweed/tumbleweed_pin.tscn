@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cdobbgfgb1n2h" path="res://features/pins/tumbleweed/tumbleweed_pin.gd" id="1_tc6gv"]
 [ext_resource type="PackedScene" uid="uid://880ywwoxw5lx" path="res://features/effects/score_donor.tscn" id="2_783xm"]
 [ext_resource type="PackedScene" uid="uid://bkbd6abgxgafv" path="res://assets/3D/asset_scene_files/tumbleweed_5.tscn" id="2_beo43"]
-[ext_resource type="AudioStream" uid="uid://cxaq7k0oc77a1" path="res://assets/audio/tumbleweed_collide_dummy_250122.mp3" id="4_q1kie"]
+[ext_resource type="AudioStream" uid="uid://cxaq7k0oc77a1" path="res://assets/audio/bumpers/tumbleweed_collide_dummy_250122.mp3" id="4_q1kie"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tyrkg"]
 

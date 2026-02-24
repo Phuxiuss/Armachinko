@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mu4hankcb4ka" path="res://features/pins/bumpers/rectangle_bumper.gd" id="1_12ohl"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="2_3mxuv"]
-[ext_resource type="AudioStream" uid="uid://b4744edquf27t" path="res://Assets/sound/wall_collide.mp3" id="3_2xipt"]
+[ext_resource type="AudioStream" uid="uid://b4744edquf27t" path="res://assets/audio/bumpers/wall_collide.mp3" id="3_2xipt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tv8o"]
 size = Vector3(12, 2, 3)

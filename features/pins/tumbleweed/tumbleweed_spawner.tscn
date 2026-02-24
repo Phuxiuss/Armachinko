@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://d35csco7syda3" path="res://features/pins/tumbleweed/tumbleweed_spawner.gd" id="1_gv42a"]
 [ext_resource type="PackedScene" uid="uid://b5yt85k6a7ds3" path="res://features/pins/tumbleweed/tumbleweed_pin.tscn" id="2_q07dv"]
 [ext_resource type="PackedScene" uid="uid://b5jejnmlji66c" path="res://assets/3D/asset_scene_files/grass_big.tscn" id="3_ukfp2"]
-[ext_resource type="Texture2D" uid="uid://fbkc2rhuu717" path="res://icon.svg" id="4_dwvqr"]
-[ext_resource type="AudioStream" uid="uid://bv8vd3u6xh8cf" path="res://assets/audio/grass_collide_dummy_250122.mp3" id="5_ifxes"]
+[ext_resource type="Texture2D" uid="uid://dkaexinu2vm5q" path="res://assets/2D/sprites/ui/icons/ui_score_milestone_cactus_pin_icon.png" id="4_dwvqr"]
+[ext_resource type="AudioStream" uid="uid://bv8vd3u6xh8cf" path="res://assets/audio/bumpers/grass_collide_dummy_250122.mp3" id="5_ifxes"]
 
 [node name="TumbleweedSpawner" type="Marker3D" groups=["TumbleweedSpawners"]]
 script = ExtResource("1_gv42a")

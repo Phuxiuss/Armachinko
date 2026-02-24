@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://mu4hankcb4ka" path="res://features/pins/bumpers/rectangle_bumper.gd" id="1_db3sa"]
 [ext_resource type="PackedScene" uid="uid://3tx754lla3py" path="res://assets/3D/asset_scene_files/thin_rectangle_bumper.tscn" id="2_iej2u"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="2_pwas0"]
-[ext_resource type="AudioStream" uid="uid://fbp14hsdwfc8" path="res://assets/audio/woodrail_collide.mp3" id="4_mo3nv"]
+[ext_resource type="AudioStream" uid="uid://fbp14hsdwfc8" path="res://assets/audio/bumpers/woodrail_collide.mp3" id="4_mo3nv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tv8o"]
 size = Vector3(12, 2.27905, 4.86816)

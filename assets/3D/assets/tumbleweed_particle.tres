@@ -1,6 +1,6 @@
 [gd_resource type="PlaneMesh" format=3 uid="uid://bqmnfycr17t7x"]
 
-[ext_resource type="Texture2D" uid="uid://d0f1vhu4f0il8" path="res://Assets/2D/sprites/vfx_particle/tumbleweed_vfx.png" id="1_l20bv"]
+[ext_resource type="Texture2D" uid="uid://d0f1vhu4f0il8" path="res://assets/2D/sprites/vfx_particle/tumbleweed_vfx.png" id="1_l20bv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_47fxk"]
 transparency = 1

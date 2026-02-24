@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ciy1b4anelnks" path="res://features/pins/bumpers/bumper.gd" id="1_m6dyj"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="2_t12pe"]
 [ext_resource type="PackedScene" path="res://assets/3d/asset scene files/sheep.tscn" id="3_5dkui"]
-[ext_resource type="AudioStream" uid="uid://cmevmhnooga52" path="res://Assets/sound/sheep_angry.mp3" id="4_cbbw8"]
-[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://Assets/sound/sheepfence_hit.mp3" id="5_sjciu"]
+[ext_resource type="AudioStream" uid="uid://cmevmhnooga52" path="res://assets/audio/bumpers/sheep_angry.mp3" id="4_cbbw8"]
+[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://assets/audio/bumpers/sheepfence_hit.mp3" id="5_sjciu"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3luds"]
 points = PackedVector3Array(0, 0, 0, 8, 0, 0, 8, 8, 0, 8, 8, 4, 8, 0, 4, 0, 0, 4)

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cs2mpntwx3cli"]
 
 [ext_resource type="Script" uid="uid://un60sh878jr3" path="res://features/special/tumbleweed_avalanche_message.gd" id="1_y8vga"]
-[ext_resource type="Texture2D" uid="uid://cbew2a6w05i7i" path="res://Assets/2D/sprites/ui/icons/ui_tumbleweed_icon.png" id="2_vhhld"]
-[ext_resource type="FontFile" uid="uid://bvjdx0irlylr6" path="res://Assets/2D/sprites/fonts/duality.otf" id="3_2ed07"]
-[ext_resource type="AudioStream" uid="uid://dle8pm0covso6" path="res://Assets/sound/avalanche_start.mp3" id="4_7ih35"]
+[ext_resource type="Texture2D" uid="uid://cbew2a6w05i7i" path="res://assets/2D/sprites/ui/icons/ui_tumbleweed_icon.png" id="2_vhhld"]
+[ext_resource type="FontFile" uid="uid://bvjdx0irlylr6" path="res://assets/2D/sprites/fonts/duality.otf" id="3_2ed07"]
+[ext_resource type="AudioStream" uid="uid://dle8pm0covso6" path="res://assets/audio/atmosphere/avalanche_start.mp3" id="4_7ih35"]
 
 [sub_resource type="Curve" id="Curve_tqn6x"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.798851, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

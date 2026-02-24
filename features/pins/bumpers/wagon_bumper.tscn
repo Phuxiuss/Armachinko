@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ygpjio0at8gd" path="res://features/pins/bumpers/wagon_bumper.gd" id="1_612jc"]
 [ext_resource type="PackedScene" uid="uid://cndqhr50111t2" path="res://assets/3D/asset_scene_files/settler_wagon.tscn" id="2_4r7r0"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="3_71ffw"]
-[ext_resource type="AudioStream" uid="uid://bom08oxun4mn4" path="res://assets/audio/wagon_bounce.mp3" id="4_owxpb"]
+[ext_resource type="AudioStream" uid="uid://bom08oxun4mn4" path="res://assets/audio/bumpers/wagon_bounce.mp3" id="4_owxpb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tv8o"]
 size = Vector3(12, 6, 3)

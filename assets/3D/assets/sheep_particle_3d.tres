@@ -1,6 +1,6 @@
 [gd_resource type="PlaneMesh" format=3 uid="uid://cp7fkuhhxbsjy"]
 
-[ext_resource type="Texture2D" uid="uid://de5v371dh7fnc" path="res://Assets/2D/sprites/vfx_particle/sheep_particle.png" id="1_6j2q2"]
+[ext_resource type="Texture2D" uid="uid://de5v371dh7fnc" path="res://assets/2D/sprites/vfx_particle/sheep_particle.png" id="1_6j2q2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxs2w"]
 transparency = 3

@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bi4yvi4177xwy" path="res://features/pins/bumpers/sheep_bumper.gd" id="1_0bgon"]
 [ext_resource type="PackedScene" uid="uid://dv8iafyv8jw0f" path="res://features/effects/origin_bounce.tscn" id="2_8b0i8"]
 [ext_resource type="PackedScene" uid="uid://pxfjcsrthrwh" path="res://assets/3D/asset_scene_files/sheep_bouncer.tscn" id="2_s5gly"]
-[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://assets/audio/sheepfence_hit.mp3" id="3_vypf4"]
-[ext_resource type="AudioStream" uid="uid://cmevmhnooga52" path="res://assets/audio/sheep_angry.mp3" id="4_30pf1"]
+[ext_resource type="AudioStream" uid="uid://b756tidfoi7mk" path="res://assets/audio/bumpers/sheepfence_hit.mp3" id="3_vypf4"]
+[ext_resource type="AudioStream" uid="uid://cmevmhnooga52" path="res://assets/audio/bumpers/sheep_angry.mp3" id="4_30pf1"]
 [ext_resource type="PlaneMesh" uid="uid://cp7fkuhhxbsjy" path="res://assets/3D/assets/sheep_particle_3d.tres" id="4_y1yog"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3luds"]

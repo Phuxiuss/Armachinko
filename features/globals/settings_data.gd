@@ -32,7 +32,7 @@ func _ready():
 func setup():
 	setup_audio()
 	setup_display()
-	Input.set_custom_mouse_cursor(mouse_image,Input.CURSOR_ARROW, Vector2(mouse_image.get_width()/2, mouse_image.get_height()/2))
+	Input.set_custom_mouse_cursor(mouse_image,Input.CURSOR_ARROW, Vector2(mouse_image.get_width()/2.0, mouse_image.get_height()/2.0))
 	
 
 func setup_audio():

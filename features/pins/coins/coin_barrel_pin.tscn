@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cy5wmn1orw05"]
 
-[ext_resource type="Script" uid="uid://c5nq04er8vdaw" path="res://features/pins/coin_barrel_pin.gd" id="1_6apjc"]
-[ext_resource type="ArrayMesh" uid="uid://bu1ta6hgtwr3r" path="res://Assets/3d/meshes/gold_coin_mesh.res" id="2_4gv5n"]
-[ext_resource type="Animation" uid="uid://c3sh6danfrr0n" path="res://Assets/animations/coin_barrel_animation.res" id="3_rat5f"]
+[ext_resource type="Script" uid="uid://c5nq04er8vdaw" path="res://features/pins/coins/coin_barrel_pin.gd" id="1_6apjc"]
+[ext_resource type="ArrayMesh" uid="uid://bu1ta6hgtwr3r" path="res://assets/3D/meshes/gold_coin_mesh.res" id="2_4gv5n"]
+[ext_resource type="Animation" uid="uid://c3sh6danfrr0n" path="res://assets/animations/coin_barrel_animation.res" id="3_rat5f"]
 [ext_resource type="PackedScene" uid="uid://880ywwoxw5lx" path="res://features/effects/score_donor.tscn" id="3_rl2fr"]
-[ext_resource type="AudioStream" uid="uid://djanlwonp8q7a" path="res://Assets/sound/gold_barrel_bounce.mp3" id="4_ekfh2"]
+[ext_resource type="AudioStream" uid="uid://djanlwonp8q7a" path="res://assets/audio/pins/gold_barrel_bounce.mp3" id="4_ekfh2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h0kjh"]
 rough = true
