@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var title_screen_path : String = "res://features/ui/menu/title_screen.tscn"
+@export var title_screen : PackedScene
 
 signal time_zone_changed_to(new_time_zone)
 
@@ -120,7 +120,7 @@ func _on_button_shower_timeout() -> void:
 func _on_back_to_menu_button_pressed() -> void:	
 	get_tree().paused = false
 	Globals.unset_fresh_session()
-	get_tree().change_scene_to_file(title_screen_path)
+	get_tree().change_scene_to_packed(title_screen)
 
 
 func retry_game() -> void:
@@ -132,7 +132,7 @@ func quit_to_menu() -> void:
 	get_tree().paused = false
 	Globals.update_highscore_data(PlayerData.data)	
 	Globals.unset_fresh_session()
-	get_tree().change_scene_to_file(title_screen_path)
+	get_tree().change_scene_to_packed(title_screen)
 
 
 #__________________Score_Display___________________#

@@ -1,4 +1,4 @@
-extends MenuTab
+extends BaseMenuTab
 
 
 @export var highscore_data_path = "user://highscore_data.tres" 
@@ -14,8 +14,6 @@ enum ScrollState {
 	UP
 }
 
-
-
 var state = ScrollState.NONE
 var current_scroll = 0.0
 
@@ -23,10 +21,8 @@ func activate():
 	highlight_new_entry()
 	$HighscoreCloseButton.grab_focus.call_deferred()
 	update()
-	super()
-	
+
 func deactivate():
-	super()
 	clear_new_entry_notification()
 	
 func clear_new_entry_notification():
@@ -35,7 +31,6 @@ func clear_new_entry_notification():
 func update():
 	load_highscore_data()
 	update_player_highscore()
-	
 	highscore_data.max_size = list_length
 	highscore_table.populate_entries(highscore_data, list_length)
 	save_highscore_data()

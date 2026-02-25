@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6ef32bkkrmcc"]
 
 [ext_resource type="FontFile" uid="uid://g78xifj7xv47" path="res://assets/2D/sprites/fonts/January Snack.otf" id="2_0ojfu"]
-[ext_resource type="Theme" path="res://features/ui/highscore_popup/game_over_screen_theme.tres" id="2_ryfvg"]
+[ext_resource type="Theme" uid="uid://d2wm3pdu4looo" path="res://features/UI/in_game/game_over/game_over_screen_theme.tres" id="2_ryfvg"]
 [ext_resource type="Script" uid="uid://b08t5i37l0mtr" path="res://features/UI/main_menu/highscore_list/highscore_screen_list_entry.gd" id="2_w455s"]
 [ext_resource type="Texture2D" uid="uid://b1emook7grdnn" path="res://assets/2D/sprites/ui/2d_sprites/ui_highscore_list_tag_1.png" id="3_6xoky"]
 

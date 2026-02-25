@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://880ywwoxw5lx"]
+[gd_scene format=3 uid="uid://880ywwoxw5lx"]
 
-[ext_resource type="Script" path="res://features/effects/score_donor.gd" id="1_lqy04"]
-[ext_resource type="PackedScene" uid="uid://bttf3gyo7vxm1" path="res://features/effects/score_popup/score_popup.tscn" id="2_c5hxk"]
+[ext_resource type="Script" uid="uid://dq4vbcra2jtfu" path="res://features/effects/score_donor.gd" id="1_lqy04"]
+[ext_resource type="PackedScene" uid="uid://bttf3gyo7vxm1" path="res://features/effects/score_popup.tscn" id="2_c5hxk"]
 
 [node name="ScoreDonor" type="Node3D"]
 script = ExtResource("1_lqy04")

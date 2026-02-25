@@ -1,4 +1,4 @@
-extends MenuTab
+extends BaseMenuTab
 class_name Settings
 
 
@@ -9,7 +9,6 @@ var sfx_bus
 @onready var window = get_window()
 
 func _ready() -> void:
-	super()
 	var vsync_mode = DisplayServer.window_get_vsync_mode()
 	
 	if vsync_mode == DisplayServer.VSyncMode.VSYNC_DISABLED:
@@ -66,9 +65,6 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(sfx_bus, linear_to_db(value))
 	SettingsData.sfx_volume_linear = value
 
-
-
-
 func _on_main_volume_checkbox_toggled(toggled_on: bool) -> void:
 	AudioServer.set_bus_mute(master_bus, not toggled_on)
 
@@ -88,7 +84,6 @@ func _on_input_style_a_checkbox_toggled(toggled_on: bool) -> void:
 
 func _on_input_style_b_checkbox_toggled(toggled_on: bool) -> void:
 	$Controls/InputStyleACheckbox.button_pressed = not toggled_on
-
 
 func _on_sfx_slider_gui_input(event):
 	if event is InputEventMouseButton:

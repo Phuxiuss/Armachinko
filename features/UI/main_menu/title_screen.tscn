@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3m1rq41qbrhr"]
 
 [ext_resource type="Script" uid="uid://400tgmujeqtk" path="res://features/UI/main_menu/title_screen.gd" id="1_p58nm"]
+[ext_resource type="PackedScene" uid="uid://bwad6smb1avc" path="res://features/level/main_level.tscn" id="2_kwlkc"]
 [ext_resource type="Texture2D" uid="uid://dt0qfwclwmigj" path="res://assets/2D/sprites/2d_art/main_menu_artwork.png" id="2_urvuo"]
 [ext_resource type="Texture2D" uid="uid://3nqmg8hl804o" path="res://assets/2D/sprites/vfx_particle/particle.png" id="3_bo15f"]
 [ext_resource type="PackedScene" uid="uid://2nauafwfu4ye" path="res://features/UI/sound/button_sound_installer.tscn" id="4_rc1qo"]
@@ -20,13 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://kdcx8h0loojr" path="res://assets/2D/sprites/ui/buttons/ui_button_quit.png" id="17_q0wab"]
 [ext_resource type="Texture2D" uid="uid://bmi3gn0lqu82" path="res://assets/2D/sprites/ui/2d_sprites/nail.png" id="18_3p86a"]
 [ext_resource type="PackedScene" uid="uid://ck301xuxmblmj" path="res://features/UI/main_menu/name_input/last_name_scroll.tscn" id="19_ff213"]
-[ext_resource type="Texture2D" uid="uid://cfcey74yakn67" path="res://assets/2D/sprites/vfx_particle/vfx_wood.png" id="20_tlrx6"]
 [ext_resource type="PackedScene" uid="uid://gifja01es87a" path="res://features/UI/main_menu/settings/settings_tab.tscn" id="20_yx5ho"]
 [ext_resource type="Texture2D" uid="uid://l8o3jpucxquf" path="res://assets/2D/sprites/ui/2d_sprites/logo.png" id="21_0unve"]
 [ext_resource type="PackedScene" uid="uid://jtei825vb2jh" path="res://features/UI/main_menu/highscore_list/highscore_tab.tscn" id="21_32g52"]
-[ext_resource type="Texture2D" uid="uid://b52q714noqtvx" path="res://assets/2D/sprites/ui/2d_sprites/ui_main_menu_current_highscore.png" id="22_3rb8b"]
 [ext_resource type="PackedScene" uid="uid://jbbh1luxo5m5" path="res://features/UI/main_menu/credits/credits_tab.tscn" id="22_okf48"]
-[ext_resource type="FontFile" uid="uid://bvjdx0irlylr6" path="res://assets/2D/sprites/fonts/duality.otf" id="23_mrcnk"]
 [ext_resource type="PackedScene" uid="uid://by8vpiqbqn5k2" path="res://features/UI/main_menu/are_you_sure/are_you_sure_tab.tscn" id="23_ogqmd"]
 [ext_resource type="PackedScene" uid="uid://dyrltqj0lskg3" path="res://features/UI/main_menu/enter_name/enter_name_tab.tscn" id="24_hg5me"]
 [ext_resource type="AudioStream" uid="uid://goepoohwofep" path="res://assets/audio/ui/button_reject.mp3" id="26_2r31b"]
@@ -127,7 +125,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartButton:rotation")
+tracks/0/path = NodePath("Start:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -136,30 +134,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [-0.03346]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WoodParticles:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WoodParticles2:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_0h8y4"]
 resource_name = "wiggling_signs"
@@ -167,7 +141,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartButton:rotation")
+tracks/0/path = NodePath("Start:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -176,45 +150,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0, 0.349066, -0.0872665]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WoodParticles:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WoodParticles2:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_wmhrn"]
 resource_name = "wood_particles"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WoodParticles:emitting")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o10ag"]
 _data = {
@@ -223,115 +161,12 @@ _data = {
 &"wood_particles": SubResource("Animation_wmhrn")
 }
 
-[sub_resource type="Curve" id="Curve_pi2uf"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_80qj7"]
-curve = SubResource("Curve_pi2uf")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dk8ds"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-angle_min = -90.0
-angle_max = -90.0
-initial_velocity_min = 300.0
-initial_velocity_max = 300.0
-gravity = Vector3(0, 98, 0)
-scale_min = 0.5
-scale_max = 0.8
-scale_over_velocity_max = 50.0
-alpha_curve = SubResource("CurveTexture_80qj7")
-
-[sub_resource type="Curve" id="Curve_jwlfp"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.494253, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_m6oue"]
-curve = SubResource("Curve_jwlfp")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8hak3"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-angle_min = 90.0
-angle_max = 90.0
-initial_velocity_min = -300.0
-initial_velocity_max = -300.0
-gravity = Vector3(0, 98, 0)
-scale_min = 0.5
-scale_max = 0.8
-scale_over_velocity_max = 50.0
-alpha_curve = SubResource("CurveTexture_m6oue")
-
-[sub_resource type="Animation" id="Animation_n4lih"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(810, 49)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_3lnv5"]
-resource_name = "current_highscore_drop_down"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(810, -200), Vector2(810, 40)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jdtxe"]
-_data = {
-&"RESET": SubResource("Animation_n4lih"),
-&"current_highscore_drop_down": SubResource("Animation_3lnv5")
-}
-
 [sub_resource type="Animation" id="Animation_1ng5b"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/AreYouSureTab:scale")
+tracks/0/path = NodePath("Tabs/AreYouSureTab:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -343,7 +178,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/SettingsTab:scale")
+tracks/1/path = NodePath("Tabs/SettingsTab:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -355,7 +190,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/AreYouSureTab:modulate")
+tracks/2/path = NodePath("Tabs/AreYouSureTab:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -367,7 +202,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/EnterNameTab:scale")
+tracks/3/path = NodePath("Tabs/EnterNameTab:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -379,7 +214,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasLayer/SettingsTab:modulate")
+tracks/4/path = NodePath("Tabs/SettingsTab:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -391,7 +226,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("CanvasLayer/HighscoreTab:modulate")
+tracks/5/path = NodePath("Tabs/HighscoreTab:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -403,7 +238,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("CanvasLayer/CreditsTab:modulate")
+tracks/6/path = NodePath("Tabs/CreditsTab:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -415,7 +250,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CanvasLayer/HighscoreTab:scale")
+tracks/7/path = NodePath("Tabs/HighscoreTab:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -431,7 +266,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/AreYouSureTab:scale")
+tracks/0/path = NodePath("Tabs/AreYouSureTab:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -443,7 +278,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/AreYouSureTab:modulate")
+tracks/1/path = NodePath("Tabs/AreYouSureTab:modulate")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -459,7 +294,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/CreditsTab:scale")
+tracks/0/path = NodePath("Tabs/CreditsTab:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -471,7 +306,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/CreditsTab:modulate")
+tracks/1/path = NodePath("Tabs/CreditsTab:modulate")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -487,7 +322,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/EnterNameTab:scale")
+tracks/0/path = NodePath("Tabs/EnterNameTab:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -499,7 +334,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/EnterNameTab:modulate")
+tracks/1/path = NodePath("Tabs/EnterNameTab:modulate")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -515,7 +350,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/HighscoreTab:scale")
+tracks/0/path = NodePath("Tabs/HighscoreTab:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -527,7 +362,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/HighscoreTab:modulate")
+tracks/1/path = NodePath("Tabs/HighscoreTab:modulate")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -543,7 +378,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/SettingsTab:scale")
+tracks/0/path = NodePath("Tabs/SettingsTab:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -555,7 +390,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/SettingsTab:modulate")
+tracks/1/path = NodePath("Tabs/SettingsTab:modulate")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -575,20 +410,22 @@ _data = {
 &"settings_tab": SubResource("Animation_olntm")
 }
 
-[node name="TitleScreen" type="Control" unique_id=1652629495]
+[node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("animationPlayer", "backgroundOverlay")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_p58nm")
+gameLevel = ExtResource("2_kwlkc")
+animationPlayer = NodePath("AnimationPlayer")
+backgroundOverlay = NodePath("TransparentBackground")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=762850324]
-
-[node name="MenuBackground" type="TextureRect" parent="CanvasLayer" unique_id=538906957]
+[node name="Background" type="TextureRect" parent="." unique_id=538906957]
+layout_mode = 0
 offset_right = 1157.33
 offset_bottom = 651.0
 texture = ExtResource("2_urvuo")
 expand_mode = 2
 
-[node name="Particles" type="GPUParticles2D" parent="CanvasLayer" unique_id=2028004539]
+[node name="Particles" type="GPUParticles2D" parent="Background" unique_id=2028004539]
 position = Vector2(499, 764)
 amount = 15
 texture = ExtResource("3_bo15f")
@@ -597,22 +434,65 @@ preprocess = 12.0
 visibility_rect = Rect2(0, -500, 200, 200)
 process_material = SubResource("ParticleProcessMaterial_p0rbf")
 
-[node name="MainButtons" type="Control" parent="CanvasLayer" unique_id=1815198683]
-layout_mode = 3
+[node name="Logo" type="Sprite2D" parent="Background" unique_id=2013732404]
+position = Vector2(90, 606)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("21_0unve")
+
+[node name="TransparentBackground" type="ColorRect" parent="." unique_id=1700766274]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.182912, 0.130714, 0.10898, 0.901961)
+
+[node name="Buttons" type="Control" parent="." unique_id=1815198683]
 anchors_preset = 0
 offset_left = 27.0
 offset_right = 27.0
 pivot_offset = Vector2(224, 416)
 
-[node name="ButtonSoundInstaller" parent="CanvasLayer/MainButtons" unique_id=114234662 node_paths=PackedStringArray("root_node") instance=ExtResource("4_rc1qo")]
-root_node = NodePath("../..")
+[node name="Post" type="Control" parent="Buttons" unique_id=68321590]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="UiPauseWoodenPost" type="Sprite2D" parent="CanvasLayer/MainButtons" unique_id=1879517286]
+[node name="UiPauseWoodenPost" type="Sprite2D" parent="Buttons/Post" unique_id=1879517286]
 position = Vector2(201.922, 444.25)
 scale = Vector2(0.736624, 0.819368)
 texture = ExtResource("4_xeimt")
 
-[node name="StartButton" type="Button" parent="CanvasLayer/MainButtons" unique_id=1222101634]
+[node name="Nail" type="Sprite2D" parent="Buttons/Post" unique_id=1531323697]
+z_index = 1
+texture_filter = 1
+position = Vector2(236, 231)
+scale = Vector2(0.240625, 0.2575)
+texture = ExtResource("18_3p86a")
+
+[node name="Nail2" type="Sprite2D" parent="Buttons/Post" unique_id=1965035049]
+z_index = 1
+texture_filter = 1
+position = Vector2(219, 340)
+scale = Vector2(0.193766, 0.212792)
+texture = ExtResource("18_3p86a")
+flip_h = true
+
+[node name="ButtonSoundInstaller" parent="Buttons" unique_id=114234662 node_paths=PackedStringArray("root_node") instance=ExtResource("4_rc1qo")]
+root_node = NodePath("../..")
+
+[node name="LastNameScroll" parent="Buttons" unique_id=440484117 instance=ExtResource("19_ff213")]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 1
+offset_left = 28.0
+offset_top = 101.0
+offset_right = 28.0
+offset_bottom = 101.0
+rotation = -0.0400733
+scale = Vector2(0.9, 0.9)
+mouse_filter = 2
+
+[node name="Start" type="Button" parent="Buttons" unique_id=1222101634]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 119.0
@@ -621,15 +501,15 @@ offset_right = 343.0
 offset_bottom = 310.0
 rotation = -0.03346
 pivot_offset = Vector2(115, 45)
-focus_neighbor_top = NodePath("../QuitButton")
-focus_neighbor_bottom = NodePath("../HighscoreButton")
-focus_next = NodePath("../HighscoreButton")
-focus_previous = NodePath("../QuitButton")
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Highscore")
+focus_next = NodePath("../Highscore")
+focus_previous = NodePath("../Quit")
 theme = ExtResource("5_5vam1")
 theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="HighscoreButton" type="Button" parent="CanvasLayer/MainButtons" unique_id=2015702095]
+[node name="Highscore" type="Button" parent="Buttons" unique_id=2015702095]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 70.0
@@ -638,10 +518,10 @@ offset_right = 370.0
 offset_bottom = 472.0
 rotation = 0.11178
 pivot_offset = Vector2(146, 48)
-focus_neighbor_top = NodePath("../StartButton")
-focus_neighbor_bottom = NodePath("../SettingsButton")
-focus_next = NodePath("../SettingsButton")
-focus_previous = NodePath("../StartButton")
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../Start")
 theme = ExtResource("5_5vam1")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_bflxt")
@@ -652,7 +532,7 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_0vogc")
 text = "High 
 Score"
 
-[node name="SettingsButton" type="Button" parent="CanvasLayer/MainButtons" unique_id=651090020]
+[node name="Settings" type="Button" parent="Buttons" unique_id=651090020]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 103.0
@@ -661,10 +541,10 @@ offset_right = 318.0
 offset_bottom = 524.0
 rotation = -0.0504632
 pivot_offset = Vector2(124, 41)
-focus_neighbor_top = NodePath("../HighscoreButton")
-focus_neighbor_bottom = NodePath("../CreditsButton")
-focus_next = NodePath("../CreditsButton")
-focus_previous = NodePath("../HighscoreButton")
+focus_neighbor_top = NodePath("../Highscore")
+focus_neighbor_bottom = NodePath("../Credits")
+focus_next = NodePath("../Credits")
+focus_previous = NodePath("../Highscore")
 theme = ExtResource("5_5vam1")
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
@@ -675,7 +555,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovgc4")
 theme_override_styles/focus = SubResource("StyleBoxTexture_1jleq")
 text = "Settings"
 
-[node name="CreditsButton" type="Button" parent="CanvasLayer/MainButtons" unique_id=1394464589]
+[node name="Credits" type="Button" parent="Buttons" unique_id=1394464589]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 135.0
@@ -684,10 +564,10 @@ offset_right = 293.0
 offset_bottom = 578.0
 rotation = 0.10878
 pivot_offset = Vector2(130, 46)
-focus_neighbor_top = NodePath("../SettingsButton")
-focus_neighbor_bottom = NodePath("../QuitButton")
-focus_next = NodePath("../QuitButton")
-focus_previous = NodePath("../SettingsButton")
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Settings")
 theme = ExtResource("5_5vam1")
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 20
@@ -698,7 +578,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_hqpyf")
 theme_override_styles/focus = SubResource("StyleBoxTexture_qfmfx")
 text = "Credits"
 
-[node name="QuitButton" type="Button" parent="CanvasLayer/MainButtons" unique_id=610962845]
+[node name="Quit" type="Button" parent="Buttons" unique_id=610962845]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 149.0
@@ -707,10 +587,10 @@ offset_right = 273.0
 offset_bottom = 607.0
 rotation = -0.116853
 pivot_offset = Vector2(126, 44)
-focus_neighbor_top = NodePath("../CreditsButton")
-focus_neighbor_bottom = NodePath("../StartButton")
-focus_next = NodePath("../StartButton")
-focus_previous = NodePath("../CreditsButton")
+focus_neighbor_top = NodePath("../Credits")
+focus_neighbor_bottom = NodePath("../Start")
+focus_next = NodePath("../Start")
+focus_previous = NodePath("../Credits")
 theme = ExtResource("5_5vam1")
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 18
@@ -721,187 +601,120 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_1wq0s")
 theme_override_styles/focus = SubResource("StyleBoxTexture_c4mcq")
 text = "Quit"
 
-[node name="AnimationPlayerWoodSigns" type="AnimationPlayer" parent="CanvasLayer/MainButtons" unique_id=978760346]
+[node name="AnimationPlayerWoodSigns" type="AnimationPlayer" parent="Buttons" unique_id=978760346]
 libraries/ = SubResource("AnimationLibrary_o10ag")
 
-[node name="Nail" type="Sprite2D" parent="CanvasLayer/MainButtons" unique_id=1531323697]
-texture_filter = 1
-position = Vector2(236, 231)
-scale = Vector2(0.240625, 0.2575)
-texture = ExtResource("18_3p86a")
+[node name="NewHighscoreEntry" parent="Buttons" unique_id=1921123959 instance=ExtResource("32_0w58u")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = -41.000023
+offset_top = 79.999985
+offset_right = -41.000023
+offset_bottom = 79.999985
 
-[node name="Nail2" type="Sprite2D" parent="CanvasLayer/MainButtons" unique_id=1965035049]
-texture_filter = 1
-position = Vector2(219, 340)
-scale = Vector2(0.193766, 0.212792)
-texture = ExtResource("18_3p86a")
-flip_h = true
+[node name="Tabs" type="Control" parent="." unique_id=1545194805]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="WoodParticles" type="GPUParticles2D" parent="CanvasLayer/MainButtons" unique_id=1535580166]
-position = Vector2(298, 253)
-emitting = false
-amount = 3
-texture = ExtResource("20_tlrx6")
-lifetime = 0.5
-one_shot = true
-speed_scale = 2.0
-process_material = SubResource("ParticleProcessMaterial_dk8ds")
-
-[node name="WoodParticles2" type="GPUParticles2D" parent="CanvasLayer/MainButtons" unique_id=1334014346]
-position = Vector2(160, 267)
-emitting = false
-amount = 3
-texture = ExtResource("20_tlrx6")
-lifetime = 0.5
-one_shot = true
-process_material = SubResource("ParticleProcessMaterial_8hak3")
-
-[node name="Logo" type="Sprite2D" parent="CanvasLayer/MainButtons" unique_id=2013732404]
-position = Vector2(63, 606)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("21_0unve")
-
-[node name="LastNameScroll" parent="CanvasLayer" unique_id=440484117 instance=ExtResource("19_ff213")]
+[node name="HighscoreTab" parent="Tabs" unique_id=2008840978 instance=ExtResource("21_32g52")]
+unique_name_in_owner = true
 visible = false
-offset_left = 55.0
-offset_top = 101.0
-offset_right = -710.0
-offset_bottom = -345.0
-rotation = -0.0400733
-scale = Vector2(0.9, 0.9)
-mouse_filter = 2
-
-[node name="UiMainMenuCurrentHighscore" type="Sprite2D" parent="CanvasLayer" unique_id=1149122528]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(810, 49)
-scale = Vector2(0.584098, 0.557646)
-texture = ExtResource("22_3rb8b")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UiMainMenuCurrentHighscore" unique_id=756771573]
-libraries/ = SubResource("AnimationLibrary_jdtxe")
-
-[node name="Highscore" type="Label" parent="CanvasLayer/UiMainMenuCurrentHighscore" unique_id=978691755]
-offset_left = -225.989
-offset_top = 41.2448
-offset_right = 251.011
-offset_bottom = 163.245
-theme_override_colors/font_outline_color = Color(0.82, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("23_mrcnk")
-theme_override_font_sizes/font_size = 40
-text = "Highest Bounty:"
-vertical_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1700766274]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 6.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.182912, 0.130714, 0.10898, 0.901961)
-
-[node name="HighscoreTab" parent="CanvasLayer" unique_id=2008840978 instance=ExtResource("21_32g52")]
-visible = false
+layout_mode = 0
 offset_left = 10.0
 offset_top = 23.0
 offset_right = 1077.0
+offset_bottom = 632.0
 scale = Vector2(1, 1)
 pivot_offset = Vector2(509, 329)
 scroll_speed = 600.0
-tab_anim_name = &"highscore_tab"
 
-[node name="HighscorePopup" type="AudioStreamPlayer" parent="CanvasLayer/HighscoreTab" unique_id=118575660]
+[node name="HighscorePopup" type="AudioStreamPlayer" parent="Tabs/HighscoreTab" unique_id=118575660]
 stream = ExtResource("28_wu7pe")
 
-[node name="SettingsTab" parent="CanvasLayer" unique_id=1723131927 instance=ExtResource("20_yx5ho")]
+[node name="SettingsTab" parent="Tabs" unique_id=1723131927 instance=ExtResource("20_yx5ho")]
+unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_left = -14.0
 offset_top = 54.0
 offset_right = 1157.0
 offset_bottom = 639.0
 pivot_offset = Vector2(573, 303)
-tab_anim_name = &"settings_tab"
 
-[node name="CreditsTab" parent="CanvasLayer" unique_id=2143456399 instance=ExtResource("22_okf48")]
+[node name="CreditsTab" parent="Tabs" unique_id=2143456399 instance=ExtResource("22_okf48")]
+unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_left = 568.748
-offset_top = 43.8328
+offset_top = 43.832794
 offset_right = 1104.75
 offset_bottom = 766.833
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(0.078125, 309.597)
-tab_anim_name = &"credits_tab"
 
-[node name="AreYouSureTab" parent="CanvasLayer" unique_id=2023402300 instance=ExtResource("23_ogqmd")]
+[node name="AreYouSureTab" parent="Tabs" unique_id=2023402300 instance=ExtResource("23_ogqmd")]
+unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_left = 170.0
 offset_top = 80.0
 offset_right = 940.0
 offset_bottom = 579.0
 pivot_offset = Vector2(389, 250)
 size_flags_horizontal = 4
-tab_anim_name = &"are_you_sure_tab"
 
-[node name="EnterNameTab" parent="CanvasLayer" unique_id=1906780269 instance=ExtResource("24_hg5me")]
+[node name="EnterNameTab" parent="Tabs" unique_id=1906780269 instance=ExtResource("24_hg5me")]
+unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_left = -287.0
 offset_top = -585.0
 offset_right = 1193.0
 offset_bottom = 1215.0
 pivot_offset = Vector2(700, 900)
-tab_anim_name = &"enter_name_tab"
 
-[node name="ButtonRejectSound" type="AudioStreamPlayer" parent="CanvasLayer/EnterNameTab" unique_id=139949844]
+[node name="ButtonRejectSound" type="AudioStreamPlayer" parent="Tabs/EnterNameTab" unique_id=139949844]
 stream = ExtResource("26_2r31b")
 volume_db = -2.894
 bus = &"SFX"
 
-[node name="NewHighscoreEntry" parent="CanvasLayer" unique_id=1921123959 instance=ExtResource("32_0w58u")]
-visible = false
-offset_left = -14.0
-offset_top = 80.0
-offset_right = -14.0
-offset_bottom = 80.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=828289346]
+libraries/ = SubResource("AnimationLibrary_bo0iu")
 
 [node name="BackroundMusic" parent="." unique_id=2263992 instance=ExtResource("32_4gnoj")]
 parameters/looping = true
 script = null
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=828289346]
-libraries/ = SubResource("AnimationLibrary_bo0iu")
-
 [node name="HighscorePopup" type="AudioStreamPlayer" parent="." unique_id=1665205229]
 stream = ExtResource("28_wu7pe")
 bus = &"SFX"
 
-[connection signal="mouse_entered" from="CanvasLayer/MainButtons/StartButton" to="CanvasLayer/MainButtons/StartButton" method="grab_focus"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="focus_entered" from="CanvasLayer/MainButtons/HighscoreButton" to="CanvasLayer/MainButtons/HighscoreButton" method="grab_click_focus"]
-[connection signal="mouse_entered" from="CanvasLayer/MainButtons/HighscoreButton" to="CanvasLayer/MainButtons/HighscoreButton" method="grab_focus"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/HighscoreButton" to="." method="_on_highscore_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/HighscoreButton" to="CanvasLayer/HighscoreTab" method="open"]
-[connection signal="mouse_entered" from="CanvasLayer/MainButtons/SettingsButton" to="CanvasLayer/MainButtons/SettingsButton" method="grab_focus"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/SettingsButton" to="CanvasLayer/SettingsTab" method="open"]
-[connection signal="mouse_entered" from="CanvasLayer/MainButtons/CreditsButton" to="CanvasLayer/MainButtons/CreditsButton" method="grab_focus"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/CreditsButton" to="CanvasLayer/CreditsTab" method="open"]
-[connection signal="mouse_entered" from="CanvasLayer/MainButtons/QuitButton" to="CanvasLayer/MainButtons/QuitButton" method="grab_focus"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainButtons/QuitButton" to="CanvasLayer/AreYouSureTab" method="open"]
-[connection signal="name_confirmed" from="CanvasLayer/LastNameScroll" to="." method="load_game"]
-[connection signal="rename_requested" from="CanvasLayer/LastNameScroll" to="." method="open_name_input_tab"]
-[connection signal="closed" from="CanvasLayer/HighscoreTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="CanvasLayer/HighscoreTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="CanvasLayer/SettingsTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="CanvasLayer/SettingsTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="CanvasLayer/CreditsTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="CanvasLayer/CreditsTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="CanvasLayer/AreYouSureTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="CanvasLayer/AreYouSureTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="CanvasLayer/EnterNameTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="CanvasLayer/EnterNameTab" to="." method="on_tab_opened"]
-[connection signal="username_confirmed" from="CanvasLayer/EnterNameTab" to="." method="load_game"]
+[connection signal="name_confirmed" from="Buttons/LastNameScroll" to="." method="load_game"]
+[connection signal="rename_requested" from="Buttons/LastNameScroll" to="." method="open_name_input_tab"]
+[connection signal="mouse_entered" from="Buttons/Start" to="Buttons/Start" method="grab_focus"]
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="Buttons/Highscore" to="Buttons/Highscore" method="grab_click_focus"]
+[connection signal="mouse_entered" from="Buttons/Highscore" to="Buttons/Highscore" method="grab_focus"]
+[connection signal="pressed" from="Buttons/Highscore" to="." method="_on_highscore_button_pressed"]
+[connection signal="pressed" from="Buttons/Highscore" to="Tabs/HighscoreTab" method="open"]
+[connection signal="mouse_entered" from="Buttons/Settings" to="Buttons/Settings" method="grab_focus"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="Tabs/SettingsTab" method="open"]
+[connection signal="mouse_entered" from="Buttons/Credits" to="Buttons/Credits" method="grab_focus"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="Tabs/CreditsTab" method="open"]
+[connection signal="mouse_entered" from="Buttons/Quit" to="Buttons/Quit" method="grab_focus"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="Tabs/AreYouSureTab" method="open"]
+[connection signal="closed" from="Tabs/HighscoreTab" to="." method="_on_tab_closed"]
+[connection signal="opened" from="Tabs/HighscoreTab" to="." method="on_tab_opened"]
+[connection signal="closed" from="Tabs/SettingsTab" to="." method="_on_tab_closed"]
+[connection signal="opened" from="Tabs/SettingsTab" to="." method="on_tab_opened"]
+[connection signal="closed" from="Tabs/AreYouSureTab" to="." method="_on_tab_closed"]
+[connection signal="opened" from="Tabs/AreYouSureTab" to="." method="on_tab_opened"]
+[connection signal="closed" from="Tabs/EnterNameTab" to="." method="_on_tab_closed"]
+[connection signal="opened" from="Tabs/EnterNameTab" to="." method="on_tab_opened"]
+[connection signal="username_confirmed" from="Tabs/EnterNameTab" to="." method="load_game"]
+
+[editable path="Buttons/LastNameScroll"]

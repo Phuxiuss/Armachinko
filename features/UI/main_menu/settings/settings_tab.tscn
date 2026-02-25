@@ -24,15 +24,11 @@
 
 [sub_resource type="ImageTexture" id="ImageTexture_7a4li"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hyf8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwnbo"]
 content_margin_left = 12.0
 content_margin_bottom = 10.0
-texture = ExtResource("8_0al6m")
+texture = ExtResource("10_kd4no")
 region_rect = Rect2(152.07, 78.7495, 760.974, 342.974)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmn7s"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o2kse"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1yxx"]
 content_margin_left = 12.0
@@ -40,13 +36,17 @@ content_margin_bottom = 10.0
 texture = ExtResource("9_nisan")
 region_rect = Rect2(152.07, 78.7495, 760.974, 342.974)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwnbo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hyf8"]
 content_margin_left = 12.0
 content_margin_bottom = 10.0
-texture = ExtResource("10_kd4no")
+texture = ExtResource("8_0al6m")
 region_rect = Rect2(152.07, 78.7495, 760.974, 342.974)
 
-[node name="SettingsTab" type="TextureRect" node_paths=PackedStringArray("initial_focus")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o2kse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmn7s"]
+
+[node name="SettingsTab" type="TextureRect" unique_id=297597885]
 offset_left = -12.0
 offset_top = 51.0
 offset_right = 1192.0
@@ -54,15 +54,14 @@ offset_bottom = 651.0
 texture = ExtResource("1_6vf2c")
 expand_mode = 1
 script = ExtResource("1_wo70h")
-initial_focus = NodePath("SettingsCloseButton")
 
-[node name="HighscoreBanner" type="Sprite2D" parent="."]
+[node name="HighscoreBanner" type="Sprite2D" parent="." unique_id=1594713875]
 position = Vector2(392.739, 156.817)
 rotation = -0.0045942
 scale = Vector2(0.475973, 0.424826)
 texture = ExtResource("6_4bmd8")
 
-[node name="GraphicsandAudioLabel" type="Label" parent="."]
+[node name="GraphicsandAudioLabel" type="Label" parent="." unique_id=13119464]
 layout_mode = 0
 offset_left = 276.84
 offset_top = 142.124
@@ -78,21 +77,21 @@ text = "Graphics & Audio"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GraphicsandControls" type="Sprite2D" parent="."]
+[node name="GraphicsandControls" type="Sprite2D" parent="." unique_id=961809455]
 position = Vector2(388.35, 354.98)
 rotation = 0.00783582
 scale = Vector2(0.739788, 0.725734)
 texture = ExtResource("3_enrrr")
 flip_h = true
 
-[node name="Nail" type="Sprite2D" parent="GraphicsandControls"]
+[node name="Nail" type="Sprite2D" parent="GraphicsandControls" unique_id=2104169257]
 position = Vector2(0.686909, -191.218)
 rotation = -0.00445701
 scale = Vector2(0.319668, 0.344725)
 skew = -0.000303626
 texture = ExtResource("9_w2qbj")
 
-[node name="Fullscreen" type="Label" parent="GraphicsandControls"]
+[node name="Fullscreen" type="Label" parent="GraphicsandControls" unique_id=2143193248]
 offset_left = -136.988
 offset_top = -151.135
 offset_right = 52.0125
@@ -104,7 +103,7 @@ theme_override_fonts/font = ExtResource("3_nh3u2")
 theme_override_font_sizes/font_size = 30
 text = "Fullscreen"
 
-[node name="FullscreenCheckbox" type="CheckBox" parent="GraphicsandControls/Fullscreen"]
+[node name="FullscreenCheckbox" type="CheckBox" parent="GraphicsandControls/Fullscreen" unique_id=1652420540]
 layout_mode = 0
 offset_left = 200.0
 offset_top = -11.0
@@ -119,7 +118,7 @@ theme_override_icons/checked = SubResource("ImageTexture_a4u4e")
 theme_override_icons/unchecked = SubResource("ImageTexture_7a4li")
 button_pressed = true
 
-[node name="VSync" type="Label" parent="GraphicsandControls"]
+[node name="VSync" type="Label" parent="GraphicsandControls" unique_id=1720231942]
 offset_left = -137.116
 offset_top = -95.3611
 offset_right = 15.8834
@@ -131,7 +130,7 @@ theme_override_fonts/font = ExtResource("3_nh3u2")
 theme_override_font_sizes/font_size = 30
 text = "V-Sync"
 
-[node name="VSynncCheckbox" type="CheckBox" parent="GraphicsandControls/VSync"]
+[node name="VSynncCheckbox" type="CheckBox" parent="GraphicsandControls/VSync" unique_id=552680704]
 layout_mode = 0
 offset_left = 130.0
 offset_top = -6.0
@@ -146,7 +145,7 @@ theme_override_icons/checked = SubResource("ImageTexture_a4u4e")
 theme_override_icons/unchecked = SubResource("ImageTexture_7a4li")
 button_pressed = true
 
-[node name="MainVolume" type="Label" parent="GraphicsandControls"]
+[node name="MainVolume" type="Label" parent="GraphicsandControls" unique_id=1279896777]
 offset_left = -110.121
 offset_top = -32.2052
 offset_right = 96.8793
@@ -160,7 +159,7 @@ text = "Master Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainVolumeCheckbox" type="CheckBox" parent="GraphicsandControls/MainVolume"]
+[node name="MainVolumeCheckbox" type="CheckBox" parent="GraphicsandControls/MainVolume" unique_id=1277884026]
 layout_mode = 0
 offset_left = 224.129
 offset_top = 43.0683
@@ -176,7 +175,7 @@ theme_override_icons/checked = SubResource("ImageTexture_a4u4e")
 theme_override_icons/unchecked = SubResource("ImageTexture_7a4li")
 button_pressed = true
 
-[node name="MainVolumeSliderFrame" parent="GraphicsandControls/MainVolume" instance=ExtResource("8_1etw2")]
+[node name="MainVolumeSliderFrame" parent="GraphicsandControls/MainVolume" unique_id=1085947904 instance=ExtResource("8_1etw2")]
 layout_mode = 0
 offset_left = -29.0
 offset_top = 53.0
@@ -184,7 +183,7 @@ offset_right = 215.0
 offset_bottom = 71.0
 value = 0.65
 
-[node name="Music" type="Label" parent="GraphicsandControls"]
+[node name="Music" type="Label" parent="GraphicsandControls" unique_id=929231529]
 offset_left = -92.9849
 offset_top = 51.7155
 offset_right = 83.0151
@@ -198,7 +197,7 @@ text = "Music"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MusicCheckbox" type="CheckBox" parent="GraphicsandControls/Music"]
+[node name="MusicCheckbox" type="CheckBox" parent="GraphicsandControls/Music" unique_id=1143794963]
 layout_mode = 0
 offset_left = 202.977
 offset_top = 25.7116
@@ -213,7 +212,7 @@ theme_override_icons/checked = SubResource("ImageTexture_a4u4e")
 theme_override_icons/unchecked = SubResource("ImageTexture_7a4li")
 button_pressed = true
 
-[node name="MusicSlider" parent="GraphicsandControls/Music" instance=ExtResource("8_1etw2")]
+[node name="MusicSlider" parent="GraphicsandControls/Music" unique_id=230276806 instance=ExtResource("8_1etw2")]
 layout_mode = 0
 offset_left = -46.4058
 offset_top = 37.9233
@@ -221,7 +220,7 @@ offset_right = 197.594
 offset_bottom = 55.9233
 value = 0.65
 
-[node name="Sounds" type="Label" parent="GraphicsandControls"]
+[node name="Sounds" type="Label" parent="GraphicsandControls" unique_id=710195314]
 offset_left = -93.0834
 offset_top = 127.52
 offset_right = 81.9166
@@ -235,7 +234,7 @@ text = "Sounds"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SoundsCheckbox" type="CheckBox" parent="GraphicsandControls/Sounds"]
+[node name="SoundsCheckbox" type="CheckBox" parent="GraphicsandControls/Sounds" unique_id=1574034724]
 layout_mode = 0
 offset_left = 203.508
 offset_top = 27.7016
@@ -248,7 +247,7 @@ theme_override_icons/checked = SubResource("ImageTexture_a4u4e")
 theme_override_icons/unchecked = SubResource("ImageTexture_7a4li")
 button_pressed = true
 
-[node name="SFXSlider" parent="GraphicsandControls/Sounds" instance=ExtResource("8_1etw2")]
+[node name="SFXSlider" parent="GraphicsandControls/Sounds" unique_id=562932157 instance=ExtResource("8_1etw2")]
 layout_mode = 0
 offset_left = -45.6709
 offset_top = 40.2372
@@ -256,14 +255,14 @@ offset_right = 198.329
 offset_bottom = 58.2372
 value = 0.65
 
-[node name="HighscoreBanner2" type="Sprite2D" parent="."]
+[node name="HighscoreBanner2" type="Sprite2D" parent="." unique_id=1197681728]
 position = Vector2(768.258, 159.725)
 rotation = -0.00306207
 scale = Vector2(0.436538, 0.386321)
 skew = 0.00170326
 texture = ExtResource("6_4bmd8")
 
-[node name="Controls2" type="Label" parent="."]
+[node name="Controls2" type="Label" parent="." unique_id=813474287]
 layout_mode = 0
 offset_left = 698.0
 offset_top = 144.0
@@ -278,13 +277,13 @@ text = "Controls"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Controls" type="Sprite2D" parent="."]
+[node name="Controls" type="Sprite2D" parent="." unique_id=364493331]
 position = Vector2(745.727, 357.721)
 rotation = -0.0122141
 scale = Vector2(0.751006, 0.731045)
 texture = ExtResource("5_nbmki")
 
-[node name="InputStyleA" type="Label" parent="Controls"]
+[node name="InputStyleA" type="Label" parent="Controls" unique_id=1854095428]
 offset_left = -58.7571
 offset_top = -179.565
 offset_right = 103.243
@@ -298,7 +297,7 @@ theme_override_font_sizes/font_size = 30
 text = "Keyboard"
 vertical_alignment = 1
 
-[node name="InputStyleB" type="Label" parent="Controls"]
+[node name="InputStyleB" type="Label" parent="Controls" unique_id=1180424724]
 offset_left = -78.1965
 offset_top = -0.599583
 offset_right = 117.804
@@ -311,26 +310,26 @@ theme_override_font_sizes/font_size = 30
 text = "Controller"
 vertical_alignment = 1
 
-[node name="Nail3" type="Sprite2D" parent="Controls"]
+[node name="Nail3" type="Sprite2D" parent="Controls" unique_id=1746826440]
 position = Vector2(27.9338, -190.399)
 scale = Vector2(0.354027, 0.391094)
 texture = ExtResource("9_w2qbj")
 
-[node name="UiControlls2(2)" type="Sprite2D" parent="Controls"]
+[node name="UiControlls2(2)" type="Sprite2D" parent="Controls" unique_id=1327707455]
 position = Vector2(114.215, -55.6414)
 rotation = 0.0125476
 scale = Vector2(0.818904, 0.841257)
 skew = -0.000658154
 texture = ExtResource("10_a4dbx")
 
-[node name="UiControlls(2)" type="Sprite2D" parent="Controls"]
+[node name="UiControlls(2)" type="Sprite2D" parent="Controls" unique_id=1952771337]
 position = Vector2(-96.1049, -62.3846)
 rotation = 0.0125476
 scale = Vector2(0.748998, 0.769443)
 skew = -0.000658154
 texture = ExtResource("11_1yy1q")
 
-[node name="Label" type="Label" parent="Controls/UiControlls(2)"]
+[node name="Label" type="Label" parent="Controls/UiControlls(2)" unique_id=1017416533]
 offset_left = -65.6644
 offset_top = -5.25342
 offset_right = -50.6644
@@ -340,7 +339,7 @@ theme_override_fonts/font = ExtResource("3_nh3u2")
 theme_override_font_sizes/font_size = 30
 text = "A"
 
-[node name="Label2" type="Label" parent="Controls/UiControlls(2)"]
+[node name="Label2" type="Label" parent="Controls/UiControlls(2)" unique_id=589136833]
 offset_left = 56.8888
 offset_top = -7.1111
 offset_right = 79.8888
@@ -350,7 +349,7 @@ theme_override_fonts/font = ExtResource("3_nh3u2")
 theme_override_font_sizes/font_size = 30
 text = "D"
 
-[node name="Label3" type="Label" parent="Controls"]
+[node name="Label3" type="Label" parent="Controls" unique_id=591139266]
 offset_left = -153.878
 offset_top = -19.3333
 offset_right = -24.878
@@ -361,7 +360,7 @@ theme_override_font_sizes/font_size = 20
 text = "Rotate"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Controls"]
+[node name="Label5" type="Label" parent="Controls" unique_id=1189122351]
 offset_left = -159.905
 offset_top = 151.592
 offset_right = -30.9052
@@ -372,7 +371,7 @@ theme_override_font_sizes/font_size = 20
 text = "Rotate"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Controls"]
+[node name="Label6" type="Label" parent="Controls" unique_id=2051901147]
 offset_left = 50.4964
 offset_top = 151.496
 offset_right = 179.497
@@ -383,7 +382,7 @@ theme_override_font_sizes/font_size = 20
 text = "Shoot"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Controls"]
+[node name="Label4" type="Label" parent="Controls" unique_id=928538797]
 offset_left = 48.5188
 offset_top = -18.1616
 offset_right = 177.519
@@ -394,12 +393,12 @@ theme_override_font_sizes/font_size = 20
 text = "Shoot"
 horizontal_alignment = 1
 
-[node name="UiControllsController(1)" type="Sprite2D" parent="Controls"]
+[node name="UiControllsController(1)" type="Sprite2D" parent="Controls" unique_id=39330486]
 position = Vector2(-94.0946, 104.538)
 scale = Vector2(0.554886, 0.560567)
 texture = ExtResource("13_v5k1w")
 
-[node name="Label" type="Label" parent="Controls/UiControllsController(1)"]
+[node name="Label" type="Label" parent="Controls/UiControllsController(1)" unique_id=2143822234]
 offset_left = -30.2352
 offset_top = -31.5635
 offset_right = 28.7648
@@ -411,7 +410,7 @@ text = "L/R"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UiControllsController21(1)" type="Sprite2D" parent="Controls"]
+[node name="UiControllsController21(1)" type="Sprite2D" parent="Controls" unique_id=1302262346]
 position = Vector2(114.945, 109.931)
 rotation = 0.0124344
 scale = Vector2(0.56087, 0.576405)
@@ -419,7 +418,7 @@ skew = -0.000436664
 texture = ExtResource("14_hdr1y")
 flip_v = true
 
-[node name="Label" type="Label" parent="Controls/UiControllsController21(1)"]
+[node name="Label" type="Label" parent="Controls/UiControllsController21(1)" unique_id=1600431806]
 offset_left = -18.5615
 offset_top = 24.7408
 offset_right = 12.4385
@@ -432,13 +431,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="SettingsSalonSign" type="Sprite2D" parent="."]
+[node name="SettingsSalonSign" type="Sprite2D" parent="." unique_id=398246655]
 position = Vector2(586.785, 45.9959)
 rotation = -0.00227952
 scale = Vector2(0.482726, 0.464605)
 texture = ExtResource("7_ixsd5")
 
-[node name="Settings" type="Label" parent="."]
+[node name="Settings" type="Label" parent="." unique_id=1253907470]
 layout_mode = 0
 offset_left = 420.0
 offset_top = 27.0
@@ -452,7 +451,7 @@ text = "Sett            ings "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsCloseButton" type="Button" parent="."]
+[node name="SettingsCloseButton" type="Button" parent="." unique_id=464887925]
 layout_mode = 0
 offset_left = 468.0
 offset_top = 517.0
@@ -464,15 +463,15 @@ focus_previous = NodePath("../GraphicsandControls/Sounds/SoundsCheckbox")
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_nh3u2")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxTexture_8hyf8")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_gmn7s")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_o2kse")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8hyf8")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_q1yxx")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bwnbo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q1yxx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8hyf8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_o2kse")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gmn7s")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8hyf8")
 text = "Back"
 
-[node name="SFXSamplePlayer" type="AudioStreamPlayer" parent="."]
+[node name="SFXSamplePlayer" type="AudioStreamPlayer" parent="." unique_id=2135984610]
 stream = ExtResource("20_gu7f2")
 bus = &"SFX"
 

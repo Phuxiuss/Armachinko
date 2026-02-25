@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Armachinko"
-run/main_scene="res://features/ui/menu/title_screen.tscn"
+run/main_scene="uid://b3m1rq41qbrhr"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.0562916, 0.0562916, 0.0562916, 1)
 boot_splash/stretch_mode=0

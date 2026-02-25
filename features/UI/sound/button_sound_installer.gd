@@ -1,8 +1,6 @@
 extends Node
 
 @export var root_node : Node 
-
-
 @export var highlight_sound : AudioStreamPlayer
 @export var menu_click : AudioStreamPlayer
 

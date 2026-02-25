@@ -1,5 +1,4 @@
-extends MenuTab
-
+extends BaseMenuTab
 signal username_confirmed
 
 var username : String = ""
@@ -8,10 +7,8 @@ var regex
 func _ready() -> void:
 	regex = RegEx.create_from_string("^[A-Z0-9_-]+[A-Z0-9_-]*$")
 	remove_special_characters("a!b")
-	super()
 
 func activate():
-	super()
 	$NameEntry.grab_focus.call_deferred()
 	
 
@@ -74,27 +71,27 @@ func remove_special_characters(old_string : String):
 	return word_string
 
 
-func _input(event : InputEvent) -> void:
-	if active:
-		if event.is_action_pressed("ui_cancel"):
-			close()
-		elif event.is_action_pressed("ui_commit"):
-			_on_confirm_button_pressed()
-		elif event is TypeKeyEvent and event.pressed:
-			var old_caret_column = $NameEntry.caret_column
-			if event.keycode == KEY_BACKSPACE:
-				if old_caret_column > 0:
-					$NameEntry.text = $NameEntry.text.erase(old_caret_column-1,1)
-					$NameEntry.caret_column = old_caret_column - 1
-					$NameKeySound.play()
-			elif event.keycode == KEY_SPACE:
-				$NameEntry.text = $NameEntry.text.insert(old_caret_column, " ")
-				$NameEntry.caret_column = old_caret_column + event.key_string.length()
-				$NameKeySound.play()
-			elif regex.search(event.key_string):
-				$NameEntry.text = $NameEntry.text.insert(old_caret_column, event.key_string)
-				$NameEntry.caret_column = old_caret_column + event.key_string.length()
-				$NameKeySound.play()
+#func _input(event : InputEvent) -> void:
+	#if active:
+		#if event.is_action_pressed("ui_cancel"):
+			#close()
+		#elif event.is_action_pressed("ui_commit"):
+			#_on_confirm_button_pressed()
+		#elif event is TypeKeyEvent and event.pressed:
+			#var old_caret_column = $NameEntry.caret_column
+			#if event.keycode == KEY_BACKSPACE:
+				#if old_caret_column > 0:
+					#$NameEntry.text = $NameEntry.text.erase(old_caret_column-1,1)
+					#$NameEntry.caret_column = old_caret_column - 1
+					#$NameKeySound.play()
+			#elif event.keycode == KEY_SPACE:
+				#$NameEntry.text = $NameEntry.text.insert(old_caret_column, " ")
+				#$NameEntry.caret_column = old_caret_column + event.key_string.length()
+				#$NameKeySound.play()
+			#elif regex.search(event.key_string):
+				#$NameEntry.text = $NameEntry.text.insert(old_caret_column, event.key_string)
+				#$NameEntry.caret_column = old_caret_column + event.key_string.length()
+				#$NameKeySound.play()
 
 
 func _on_name_entry_gui_input(event : InputEvent):

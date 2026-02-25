@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxv3gyu60pnyq"]
 
 [ext_resource type="Script" uid="uid://10k3daxtvrtq" path="res://features/UI/in_game/main_ui.gd" id="1_ajqhr"]
+[ext_resource type="PackedScene" uid="uid://b3m1rq41qbrhr" path="res://features/UI/main_menu/title_screen.tscn" id="2_4dn46"]
 [ext_resource type="PackedScene" uid="uid://bi0n8bhybxesp" path="res://features/UI/in_game/game_over/game_over_screen.tscn" id="2_87r3u"]
 [ext_resource type="PackedScene" uid="uid://c3xk8purr5vxr" path="res://assets/shader/vignette.tscn" id="2_efqj2"]
 [ext_resource type="FontFile" uid="uid://g78xifj7xv47" path="res://assets/2D/sprites/fonts/January Snack.otf" id="3_647mw"]
@@ -107,6 +108,7 @@ func _on_ui_time_zone_changed_to(new_time_zone: Variant) -> void:
 [node name="UI" type="CanvasLayer" unique_id=1260896637]
 process_mode = 3
 script = ExtResource("1_ajqhr")
+title_screen = ExtResource("2_4dn46")
 
 [node name="Backround" type="ColorRect" parent="." unique_id=990970691]
 anchors_preset = 15

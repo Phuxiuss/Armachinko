@@ -10,21 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://bjdiofjsvnc0c" path="res://assets/2D/sprites/ui/buttons/ui_button_start_pressed.png" id="8_dkqwx"]
 [ext_resource type="Texture2D" uid="uid://b2wgwwd1djuuv" path="res://assets/2D/sprites/ui/buttons/ui_button_start.png" id="9_02k8y"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6iq7"]
-content_margin_left = 15.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-texture = ExtResource("4_vq7y5")
-region_rect = Rect2(153.5, 81.3999, 753.5, 337.6)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrccs"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdc32"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmieo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmk3k"]
 content_margin_left = 15.0
 content_margin_bottom = 10.0
-texture = ExtResource("4_vq7y5")
+texture = ExtResource("6_axepy")
 region_rect = Rect2(153.5, 81.3999, 753.5, 337.6)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trkhn"]
@@ -33,26 +22,27 @@ content_margin_bottom = 10.0
 texture = ExtResource("5_dm5ia")
 region_rect = Rect2(153.5, 81.3999, 753.5, 337.6)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmk3k"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmieo"]
 content_margin_left = 15.0
 content_margin_bottom = 10.0
-texture = ExtResource("6_axepy")
+texture = ExtResource("4_vq7y5")
 region_rect = Rect2(153.5, 81.3999, 753.5, 337.6)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76sy3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdc32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrccs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6iq7"]
+content_margin_left = 15.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = ExtResource("7_qqmd8")
-region_rect = Rect2(176.6, 84, 756.8, 335)
+texture = ExtResource("4_vq7y5")
+region_rect = Rect2(153.5, 81.3999, 753.5, 337.6)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr0y0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ftar"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7kb3"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htc8x"]
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = ExtResource("7_qqmd8")
+texture = ExtResource("9_02k8y")
 region_rect = Rect2(176.6, 84, 756.8, 335)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7fbd"]
@@ -61,13 +51,23 @@ content_margin_bottom = 10.0
 texture = ExtResource("8_dkqwx")
 region_rect = Rect2(176.6, 84, 756.8, 335)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htc8x"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7kb3"]
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = ExtResource("9_02k8y")
+texture = ExtResource("7_qqmd8")
 region_rect = Rect2(176.6, 84, 756.8, 335)
 
-[node name="AreYouSureTab" type="TextureRect" node_paths=PackedStringArray("initial_focus")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ftar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr0y0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76sy3"]
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("7_qqmd8")
+region_rect = Rect2(176.6, 84, 756.8, 335)
+
+[node name="AreYouSureTab" type="TextureRect" unique_id=637524880]
 offset_left = 171.0
 offset_top = 76.0
 offset_right = 941.0
@@ -79,9 +79,8 @@ focus_previous = NodePath("Quit")
 texture = ExtResource("1_y523y")
 expand_mode = 1
 script = ExtResource("2_qmdsu")
-initial_focus = NodePath("Back")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1571066825]
 layout_mode = 0
 offset_left = 250.0
 offset_top = 204.0
@@ -96,7 +95,7 @@ you want to quit?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quit" type="Button" parent="."]
+[node name="Quit" type="Button" parent="." unique_id=990882352]
 layout_mode = 0
 offset_left = 209.0
 offset_top = 393.0
@@ -107,15 +106,15 @@ focus_previous = NodePath("../Back")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_6nl27")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxTexture_d6iq7")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_rrccs")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cdc32")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gmieo")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_trkhn")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tmk3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_trkhn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gmieo")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cdc32")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rrccs")
+theme_override_styles/focus = SubResource("StyleBoxTexture_d6iq7")
 text = "Quit"
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="Button" parent="." unique_id=1532530130]
 layout_mode = 0
 offset_left = 396.0
 offset_top = 393.0
@@ -126,15 +125,16 @@ focus_previous = NodePath("../Quit")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_6nl27")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxTexture_76sy3")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_vr0y0")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7ftar")
-theme_override_styles/hover = SubResource("StyleBoxTexture_x7kb3")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_o7fbd")
 theme_override_styles/normal = SubResource("StyleBoxTexture_htc8x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o7fbd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x7kb3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7ftar")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vr0y0")
+theme_override_styles/focus = SubResource("StyleBoxTexture_76sy3")
 text = "Back"
 
 [connection signal="mouse_entered" from="Quit" to="Quit" method="grab_focus" flags=3]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="mouse_entered" from="Back" to="Back" method="grab_focus" flags=3]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Back" to="." method="close"]
