@@ -38,7 +38,7 @@ func open_quit_to_menu():
 	$AreYouSureTab/Back.grab_focus.call_deferred()
 	$AreYouSureTab.show()
 	$AnimationPlayer.play("are_you_sure_tab")
-	
+
 func close_quit_to_menu():
 	$AnimationPlayer.play_backwards("are_you_sure_tab")
 	$PauseTab.show()

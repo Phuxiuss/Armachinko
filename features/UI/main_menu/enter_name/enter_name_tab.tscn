@@ -11,48 +11,48 @@
 [ext_resource type="AudioStream" uid="uid://canocsda5vcfv" path="res://assets/audio/ui/name_key_2.mp3" id="13_8nofh"]
 [ext_resource type="AudioStream" uid="uid://bqlf3f1uwc2hb" path="res://assets/audio/ui/name_key_3.mp3" id="14_bur2m"]
 [ext_resource type="AudioStream" uid="uid://dl1ghobg8w03b" path="res://assets/audio/ui/name_key_4.mp3" id="15_avwyu"]
-[ext_resource type="PackedScene" path="res://features/ui/name_input/type_writer.tscn" id="16_d8qaf"]
+[ext_resource type="PackedScene" uid="uid://c5nd45f4xiu1x" path="res://features/UI/main_menu/name_input/type_writer.tscn" id="16_d8qaf"]
 [ext_resource type="AudioStream" uid="uid://bdkkkryd31f3" path="res://assets/audio/ui/name_key_5.mp3" id="16_j1he7"]
 [ext_resource type="AudioStream" uid="uid://npnilwvlcv7n" path="res://assets/audio/ui/name_key_6.mp3" id="17_rdc76"]
 [ext_resource type="AudioStream" uid="uid://b15s1rmxd4bih" path="res://assets/audio/ui/name_enter.mp3" id="18_kj05v"]
 [ext_resource type="Texture2D" uid="uid://b523fltb30f11" path="res://assets/2D/sprites/ui/2d_sprites/ui_tutorial_text_box_2.png" id="19_0kpqy"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7lpit"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_io7hd"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gcnql"]
-texture = ExtResource("6_ddnew")
-region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
-modulate_color = Color(0.32549, 0.913725, 0.521569, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl4ol"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kuvd"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tww82"]
-texture = ExtResource("6_ddnew")
-region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
-modulate_color = Color(0.32549, 0.913725, 0.521569, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pf0ww"]
-texture = ExtResource("7_i6n5o")
-region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
-modulate_color = Color(0.454902, 0.454902, 0.454902, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7lpit"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7er8n"]
 texture = ExtResource("7_i6n5o")
 region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
 modulate_color = Color(0.94902, 0.937255, 0.898039, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pf0ww"]
+texture = ExtResource("7_i6n5o")
+region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
+modulate_color = Color(0.454902, 0.454902, 0.454902, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tww82"]
+texture = ExtResource("6_ddnew")
+region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
+modulate_color = Color(0.32549, 0.913725, 0.521569, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kuvd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl4ol"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gcnql"]
+texture = ExtResource("6_ddnew")
+region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
+modulate_color = Color(0.32549, 0.913725, 0.521569, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0s1g"]
 texture = ExtResource("6_ddnew")
 region_rect = Rect2(48.1774, 118.074, 315.552, 172.802)
 modulate_color = Color(0.937255, 0.239216, 0.258824, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2yws"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wydn4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2yws"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_60hms"]
 streams_count = 6
@@ -63,22 +63,83 @@ stream_3/stream = ExtResource("15_avwyu")
 stream_4/stream = ExtResource("16_j1he7")
 stream_5/stream = ExtResource("17_rdc76")
 
-[node name="EnterNameTab" type="TextureRect" node_paths=PackedStringArray("initial_focus")]
-offset_left = 145.0
+[sub_resource type="Animation" id="Animation_yp6y1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.35, 0.35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1tevx"]
+resource_name = "fade_in"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.35, 0.35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkwit"]
+_data = {
+&"RESET": SubResource("Animation_yp6y1"),
+&"fade_in": SubResource("Animation_1tevx")
+}
+
+[node name="EnterNameTab" type="TextureRect" unique_id=1063448364 node_paths=PackedStringArray("animation_player")]
+offset_left = 149.0
 offset_top = -26.0
-offset_right = 1610.0
+offset_right = 1614.0
 offset_bottom = 1774.0
-scale = Vector2(0.385714, 0.38)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_6j0xt")
 script = ExtResource("2_6ayhc")
-initial_focus = NodePath("NameEntry")
+animation_player = NodePath("AnimationPlayer")
 
-[node name="UiNameInputScreenLine" type="Sprite2D" parent="."]
+[node name="UiNameInputScreenLine" type="Sprite2D" parent="." unique_id=215533945]
 position = Vector2(784.26, 992.107)
 scale = Vector2(3.18123, 2.23286)
 texture = ExtResource("3_2os35")
 
-[node name="NameEntry" type="LineEdit" parent="."]
+[node name="NameEntry" type="LineEdit" parent="." unique_id=1296801974]
 layout_mode = 0
 offset_left = 267.037
 offset_top = 1315.79
@@ -88,16 +149,16 @@ focus_neighbor_top = NodePath("../DeclineButton")
 focus_neighbor_bottom = NodePath("../ConfirmButton")
 focus_next = NodePath("../ConfirmButton")
 focus_previous = NodePath("../DeclineButton")
-theme_override_colors/selection_color = Color(0.337255, 0.298039, 0.247059, 1)
-theme_override_colors/caret_color = Color(0.101961, 0.054902, 0.0705882, 1)
-theme_override_colors/font_placeholder_color = Color(0.1, 0.054, 0.0693333, 0.611765)
-theme_override_colors/font_selected_color = Color(0.913725, 0.878431, 0.8, 1)
 theme_override_colors/font_color = Color(0.101961, 0.054902, 0.0705882, 1)
+theme_override_colors/font_selected_color = Color(0.913725, 0.878431, 0.8, 1)
+theme_override_colors/font_placeholder_color = Color(0.1, 0.054, 0.0693333, 0.611765)
+theme_override_colors/caret_color = Color(0.101961, 0.054902, 0.0705882, 1)
+theme_override_colors/selection_color = Color(0.337255, 0.298039, 0.247059, 1)
 theme_override_constants/caret_width = 10
 theme_override_fonts/font = ExtResource("3_q26ww")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7lpit")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_io7hd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7lpit")
 placeholder_text = "NAME YOUR ARMADILLO."
 alignment = 1
 max_length = 15
@@ -105,7 +166,7 @@ caret_blink = true
 caret_blink_interval = 0.25
 caret_force_displayed = true
 
-[node name="ConfirmButton" type="Button" parent="."]
+[node name="ConfirmButton" type="Button" parent="." unique_id=1683658078]
 layout_mode = 0
 offset_left = 362.963
 offset_top = 1506.63
@@ -120,15 +181,15 @@ focus_previous = NodePath("../NameEntry")
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_q26ww")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxTexture_gcnql")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_dl4ol")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1kuvd")
-theme_override_styles/hover = SubResource("StyleBoxTexture_tww82")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_pf0ww")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7er8n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pf0ww")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tww82")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1kuvd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dl4ol")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gcnql")
 text = "Confirm"
 
-[node name="DeclineButton" type="Button" parent="."]
+[node name="DeclineButton" type="Button" parent="." unique_id=1373144757]
 layout_mode = 0
 offset_left = 733.963
 offset_top = 1502.63
@@ -144,15 +205,15 @@ focus_previous = NodePath("../ConfirmButton")
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_q26ww")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxTexture_i0s1g")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_u2yws")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wydn4")
-theme_override_styles/hover = SubResource("StyleBoxTexture_i0s1g")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_pf0ww")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7er8n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pf0ww")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i0s1g")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wydn4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u2yws")
+theme_override_styles/focus = SubResource("StyleBoxTexture_i0s1g")
 text = "Decline"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=874061668]
 layout_mode = 0
 offset_left = 121.852
 offset_top = 181.579
@@ -165,21 +226,21 @@ text = "Most Wanted !"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NameKeySound" type="AudioStreamPlayer" parent="."]
+[node name="NameKeySound" type="AudioStreamPlayer" parent="." unique_id=929124971]
 stream = SubResource("AudioStreamRandomizer_60hms")
 volume_db = 5.0
 bus = &"SFX"
 
-[node name="NameEnterSound" type="AudioStreamPlayer" parent="."]
+[node name="NameEnterSound" type="AudioStreamPlayer" parent="." unique_id=652761301]
 stream = ExtResource("18_kj05v")
 bus = &"SFX"
 
-[node name="UiTutorialTextBox2" type="Sprite2D" parent="."]
+[node name="UiTutorialTextBox2" type="Sprite2D" parent="." unique_id=1101720332]
 position = Vector2(10.3704, 652.632)
 scale = Vector2(1.99907, 2.21933)
 texture = ExtResource("19_0kpqy")
 
-[node name="Tutorialtext" type="Label" parent="UiTutorialTextBox2"]
+[node name="Tutorialtext" type="Label" parent="UiTutorialTextBox2" unique_id=1940983635]
 offset_left = -118.442
 offset_top = -114.682
 offset_right = 205.558
@@ -196,7 +257,7 @@ the biggest and fastest"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="BountyHunter" type="Label" parent="UiTutorialTextBox2"]
+[node name="BountyHunter" type="Label" parent="UiTutorialTextBox2" unique_id=531965586]
 offset_left = -150.833
 offset_top = 21.8334
 offset_right = 164.167
@@ -210,7 +271,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="TypeWriter" parent="." instance=ExtResource("16_d8qaf")]
+[node name="TypeWriter" parent="." unique_id=1200313532 instance=ExtResource("16_d8qaf")]
 layout_mode = 0
 offset_left = 1252.0
 offset_top = 492.0
@@ -239,6 +300,9 @@ focus_neighbor_left = NodePath("../../DeclineButton")
 [node name="M" parent="TypeWriter" index="39"]
 focus_neighbor_right = NodePath("../../ConfirmButton")
 focus_next = NodePath("../../ConfirmButton")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1681901852]
+libraries/ = SubResource("AnimationLibrary_lkwit")
 
 [connection signal="gui_input" from="NameEntry" to="." method="_on_name_entry_gui_input"]
 [connection signal="text_changed" from="NameEntry" to="." method="_on_name_entry_text_changed"]

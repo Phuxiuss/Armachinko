@@ -67,11 +67,73 @@ content_margin_bottom = 10.0
 texture = ExtResource("7_qqmd8")
 region_rect = Rect2(176.6, 84, 756.8, 335)
 
-[node name="AreYouSureTab" type="TextureRect" unique_id=637524880]
+[sub_resource type="Animation" id="Animation_yp6y1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1tevx"]
+resource_name = "fade_in"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tevx"]
+_data = {
+&"RESET": SubResource("Animation_yp6y1"),
+&"fade_in": SubResource("Animation_1tevx")
+}
+
+[node name="AreYouSureTab" type="TextureRect" unique_id=637524880 node_paths=PackedStringArray("animation_player")]
 offset_left = 171.0
 offset_top = 76.0
 offset_right = 941.0
 offset_bottom = 575.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 focus_neighbor_left = NodePath("Quit")
 focus_neighbor_right = NodePath("Quit")
 focus_next = NodePath("Quit")
@@ -79,6 +141,7 @@ focus_previous = NodePath("Quit")
 texture = ExtResource("1_y523y")
 expand_mode = 1
 script = ExtResource("2_qmdsu")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Label" type="Label" parent="." unique_id=1571066825]
 layout_mode = 0
@@ -133,8 +196,11 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_vr0y0")
 theme_override_styles/focus = SubResource("StyleBoxTexture_76sy3")
 text = "Back"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=966226866]
+libraries/ = SubResource("AnimationLibrary_1tevx")
+
 [connection signal="mouse_entered" from="Quit" to="Quit" method="grab_focus" flags=3]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="mouse_entered" from="Back" to="Back" method="grab_focus" flags=3]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Back" to="." method="close"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -13,7 +13,10 @@ func open():
 		animation_player.play("fade_in")
 
 func close():
-	hide()
 	closed.emit()
 	if animation_player:
-		animation_player.play("fade_out")
+		animation_player.play_backwards("fade_in")
+		await animation_player.animation_finished
+		hide()
+	else:
+		hide()

@@ -410,13 +410,18 @@ _data = {
 &"settings_tab": SubResource("Animation_olntm")
 }
 
-[node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("animationPlayer", "backgroundOverlay")]
+[node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("animationPlayer", "backgroundOverlay", "buttonsParent")]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 17.0
+offset_top = -1.0
+offset_right = 17.0
+offset_bottom = -1.0
 script = ExtResource("1_p58nm")
 gameLevel = ExtResource("2_kwlkc")
 animationPlayer = NodePath("AnimationPlayer")
 backgroundOverlay = NodePath("TransparentBackground")
+buttonsParent = NodePath("Buttons")
 
 [node name="Background" type="TextureRect" parent="." unique_id=538906957]
 layout_mode = 0
@@ -479,18 +484,6 @@ flip_h = true
 
 [node name="ButtonSoundInstaller" parent="Buttons" unique_id=114234662 node_paths=PackedStringArray("root_node") instance=ExtResource("4_rc1qo")]
 root_node = NodePath("../..")
-
-[node name="LastNameScroll" parent="Buttons" unique_id=440484117 instance=ExtResource("19_ff213")]
-unique_name_in_owner = true
-z_index = 1
-layout_mode = 1
-offset_left = 28.0
-offset_top = 101.0
-offset_right = 28.0
-offset_bottom = 101.0
-rotation = -0.0400733
-scale = Vector2(0.9, 0.9)
-mouse_filter = 2
 
 [node name="Start" type="Button" parent="Buttons" unique_id=1222101634]
 unique_name_in_owner = true
@@ -606,13 +599,48 @@ libraries/ = SubResource("AnimationLibrary_o10ag")
 
 [node name="NewHighscoreEntry" parent="Buttons" unique_id=1921123959 instance=ExtResource("32_0w58u")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 offset_left = -41.000023
 offset_top = 79.999985
 offset_right = -41.000023
 offset_bottom = 79.999985
 
+[node name="LastNameScroll" parent="Buttons" unique_id=440484117 instance=ExtResource("19_ff213")]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 27.0
+offset_top = 109.0
+offset_right = 27.0
+offset_bottom = 109.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = -0.0400733
+scale = Vector2(0.9, 0.9)
+mouse_filter = 2
+
+[node name="StartButton" parent="Buttons/LastNameScroll" index="3" unique_id=786140513]
+offset_left = 227.4833
+offset_top = 206.04959
+offset_right = 466.48315
+offset_bottom = 291.04932
+focus_neighbor_top = NodePath("../../Highscore")
+focus_neighbor_bottom = NodePath("../../Highscore")
+
+[node name="EditButton" parent="Buttons/LastNameScroll" index="4" unique_id=262840280]
+offset_left = 117.39358
+offset_top = 206.08357
+offset_right = 343.39334
+offset_bottom = 292.08282
+focus_neighbor_top = NodePath("../../Highscore")
+focus_neighbor_bottom = NodePath("../../Highscore")
+
 [node name="Tabs" type="Control" parent="." unique_id=1545194805]
+z_index = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -625,8 +653,7 @@ offset_left = 10.0
 offset_top = 23.0
 offset_right = 1077.0
 offset_bottom = 632.0
-scale = Vector2(1, 1)
-pivot_offset = Vector2(509, 329)
+focus_neighbor_top = NodePath("../../Buttons/Start")
 scroll_speed = 600.0
 
 [node name="HighscorePopup" type="AudioStreamPlayer" parent="Tabs/HighscoreTab" unique_id=118575660]
@@ -640,7 +667,6 @@ offset_left = -14.0
 offset_top = 54.0
 offset_right = 1157.0
 offset_bottom = 639.0
-pivot_offset = Vector2(573, 303)
 
 [node name="CreditsTab" parent="Tabs" unique_id=2143456399 instance=ExtResource("22_okf48")]
 unique_name_in_owner = true
@@ -650,7 +676,6 @@ offset_left = 568.748
 offset_top = 43.832794
 offset_right = 1104.75
 offset_bottom = 766.833
-scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(0.078125, 309.597)
 
 [node name="AreYouSureTab" parent="Tabs" unique_id=2023402300 instance=ExtResource("23_ogqmd")]
@@ -661,7 +686,6 @@ offset_left = 170.0
 offset_top = 80.0
 offset_right = 940.0
 offset_bottom = 579.0
-pivot_offset = Vector2(389, 250)
 size_flags_horizontal = 4
 
 [node name="EnterNameTab" parent="Tabs" unique_id=1906780269 instance=ExtResource("24_hg5me")]
@@ -672,6 +696,7 @@ offset_left = -287.0
 offset_top = -585.0
 offset_right = 1193.0
 offset_bottom = 1215.0
+scale = Vector2(0.385714, 0.38)
 pivot_offset = Vector2(700, 900)
 
 [node name="ButtonRejectSound" type="AudioStreamPlayer" parent="Tabs/EnterNameTab" unique_id=139949844]
@@ -690,8 +715,6 @@ script = null
 stream = ExtResource("28_wu7pe")
 bus = &"SFX"
 
-[connection signal="name_confirmed" from="Buttons/LastNameScroll" to="." method="load_game"]
-[connection signal="rename_requested" from="Buttons/LastNameScroll" to="." method="open_name_input_tab"]
 [connection signal="mouse_entered" from="Buttons/Start" to="Buttons/Start" method="grab_focus"]
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_button_pressed"]
 [connection signal="focus_entered" from="Buttons/Highscore" to="Buttons/Highscore" method="grab_click_focus"]
@@ -707,14 +730,10 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="Buttons/Quit" to="Buttons/Quit" method="grab_focus"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="Tabs/AreYouSureTab" method="open"]
-[connection signal="closed" from="Tabs/HighscoreTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="Tabs/HighscoreTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="Tabs/SettingsTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="Tabs/SettingsTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="Tabs/AreYouSureTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="Tabs/AreYouSureTab" to="." method="on_tab_opened"]
-[connection signal="closed" from="Tabs/EnterNameTab" to="." method="_on_tab_closed"]
-[connection signal="opened" from="Tabs/EnterNameTab" to="." method="on_tab_opened"]
+[connection signal="name_confirmed" from="Buttons/LastNameScroll" to="." method="load_game"]
+[connection signal="rename_requested" from="Buttons/LastNameScroll" to="." method="_on_last_name_scroll_rename_requested"]
+[connection signal="rename_requested" from="Buttons/LastNameScroll" to="." method="open_name_input_tab"]
+[connection signal="pressed" from="Buttons/LastNameScroll/EditButton" to="Tabs/EnterNameTab" method="open"]
 [connection signal="username_confirmed" from="Tabs/EnterNameTab" to="." method="load_game"]
 
 [editable path="Buttons/LastNameScroll"]

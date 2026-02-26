@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c5nd45f4xiu1x"]
 
 [ext_resource type="Texture2D" uid="uid://wp5hsctcofjj" path="res://assets/2D/sprites/ui/2d_sprites/ui_name_input_typewriter.png" id="1_gsm42"]
-[ext_resource type="Script" path="res://features/ui/name_input/type_writer.gd" id="2_uls1e"]
-[ext_resource type="PackedScene" path="res://features/ui/name_input/type_key.tscn" id="3_fbdc2"]
-[ext_resource type="PackedScene" path="res://features/ui/name_input/backspace_key.tscn" id="4_pioik"]
-[ext_resource type="PackedScene" path="res://features/ui/name_input/space_key.tscn" id="5_4rgew"]
+[ext_resource type="Script" uid="uid://c07si77vtrjyn" path="res://features/UI/main_menu/name_input/type_writer.gd" id="2_uls1e"]
+[ext_resource type="PackedScene" uid="uid://cel50c4ihosgs" path="res://features/UI/main_menu/name_input/type_key.tscn" id="3_fbdc2"]
+[ext_resource type="PackedScene" uid="uid://xtheafrnhrt6" path="res://features/UI/main_menu/name_input/backspace_key.tscn" id="4_pioik"]
+[ext_resource type="PackedScene" uid="uid://df51jcybhcf6h" path="res://features/UI/main_menu/name_input/space_key.tscn" id="5_4rgew"]
 
 [node name="TypeWriter" type="TextureRect"]
 offset_left = -16.0

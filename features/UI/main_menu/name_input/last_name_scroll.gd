@@ -15,10 +15,8 @@ func update_name(new_name):
 func _on_confirm_button_pressed():
 	name_confirmed.emit()
 
-
 func _on_edit_button_pressed():
 	rename_requested.emit()
-
 
 func scale_text():
 	var outline_size = $Name["theme_override_constants/outline_size"]

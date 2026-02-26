@@ -74,18 +74,79 @@ region_rect = Rect2(75, 68, 250, 330)
 texture = ExtResource("14_puob4")
 region_rect = Rect2(75, 68, 250, 330)
 
-[node name="HighscoreTab" type="TextureRect" unique_id=1736518096 node_paths=PackedStringArray("initial_focus")]
+[sub_resource type="Animation" id="Animation_yp6y1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1tevx"]
+resource_name = "fade_in"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_41a28"]
+_data = {
+&"RESET": SubResource("Animation_yp6y1"),
+&"fade_in": SubResource("Animation_1tevx")
+}
+
+[node name="HighscoreTab" type="TextureRect" unique_id=1736518096 node_paths=PackedStringArray("animation_player")]
 offset_left = 43.0
 offset_top = 31.0
 offset_right = 1109.0
 offset_bottom = 663.0
-scale = Vector2(0.900845, 0.94343)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("1_qkrh3")
 expand_mode = 1
 script = ExtResource("2_odrig")
 list_length = 100
 scroll_speed = 60.0
-initial_focus = NodePath("HighscoreCloseButton")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=413278137]
 layout_mode = 0
@@ -301,6 +362,9 @@ texture = ExtResource("19_j8fru")
 position = Vector2(696.183, 49.8256)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("19_j8fru")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=437400143]
+libraries/ = SubResource("AnimationLibrary_41a28")
 
 [connection signal="mouse_entered" from="HighscoreCloseButton" to="HighscoreCloseButton" method="grab_focus" flags=3]
 [connection signal="pressed" from="HighscoreCloseButton" to="." method="close"]
