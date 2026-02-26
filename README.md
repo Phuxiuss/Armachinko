@@ -14,10 +14,15 @@ Play the game on [Itch.io](https://s4g.itch.io/armachinko)!
 I worked as a Game Engineer, primarily responsible for gameplay aspects and the game’s UI, such as feature implementation, enemy behavior and the development of menu systems (main menu, pause menu, settings, etc.).
 
 ## Highlights
-- **[Title Screen](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/main_menu/title_screen.gd)** <br />
-The TitleScreen contains a modular and clean code that you can reuse to handle tabs and buttons with the help of inheriting tabs with [BaseTab](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/base_menu_tab.gd) class.
-I reused it to make my [PauseMenu](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/pause_menu/pause_menu.gd).
-- **[In Game UI](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/in_game/main_ui.gd)**
+- **[Title Screen](/features/UI/main_menu/title_screen.gd)** <br />
+The TitleScreen that handles tabs and buttons with the help of inheriting tabs with [BaseTab](/features/UI/base_menu_tab.gd) class.
+I reused the code to make my [PauseMenu](/features/UI/pause_menu/pause_menu.gd).
+
+- **[In Game UI](/features/UI/in_game/main_ui.gd)** <br />
+The In-game UI for handling the HUD, Score indicator and Pause Menu.
+
+- **[Settings](/features/UI/main_menu/settings/settings_tab.gd)** <br />
+The Settings Tab for this game. You can set the volume, display and input.
 
 ## Built With
 - **GDScript** (Core Language)
