@@ -17,7 +17,7 @@ I worked as a Game Engineer, primarily responsible for gameplay aspects and the 
 - **[Title Screen](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/main_menu/title_screen.gd)** <br />
 The TitleScreen contains a modular and clean code that you can reuse to handle tabs and buttons with the help of inheriting tabs with [BaseTab](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/base_menu_tab.gd) class.
 I also reused it to make my [PauseMenu](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/pause_menu/pause_menu.gd).
-- **[In Game UI](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/in_game/main_ui.gd)
+- **[In Game UI](https://github.com/Phuxiuss/Armachinko/blob/main/features/UI/in_game/main_ui.gd)**
 
 ## Built With
 - **GDScript** (Core Language)
