@@ -243,9 +243,6 @@ music_player = NodePath("../BackgroundMusicPlayer")
 [connection signal="time_zone_changed_to" from="." to="Audio_state_handler" method="_on_ui_time_zone_changed_to"]
 [connection signal="back_requested" from="GameOverScreen" to="." method="_on_back_to_menu_button_pressed"]
 [connection signal="retry_requested" from="GameOverScreen" to="." method="retry_game"]
-[connection signal="continue_requested" from="PauseMenu" to="." method="_on_continue_button_pressed"]
-[connection signal="quit_to_menu_requested" from="PauseMenu" to="." method="quit_to_menu"]
-[connection signal="retry_requested" from="PauseMenu" to="." method="retry_game"]
 [connection signal="tutorial_dismissed" from="TutorialOverlay" to="." method="on_tutorial_dismissed"]
 [connection signal="timeout" from="HUD/Countdown/CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 

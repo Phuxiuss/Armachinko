@@ -410,7 +410,7 @@ _data = {
 &"settings_tab": SubResource("Animation_olntm")
 }
 
-[node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("animationPlayer", "backgroundOverlay", "buttonsParent")]
+[node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("backgroundOverlay", "buttonsParent")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 17.0
@@ -419,7 +419,6 @@ offset_right = 17.0
 offset_bottom = -1.0
 script = ExtResource("1_p58nm")
 gameLevel = ExtResource("2_kwlkc")
-animationPlayer = NodePath("AnimationPlayer")
 backgroundOverlay = NodePath("TransparentBackground")
 buttonsParent = NodePath("Buttons")
 
@@ -716,7 +715,7 @@ stream = ExtResource("28_wu7pe")
 bus = &"SFX"
 
 [connection signal="mouse_entered" from="Buttons/Start" to="Buttons/Start" method="grab_focus"]
-[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons/Start" to="." method="load_game"]
 [connection signal="focus_entered" from="Buttons/Highscore" to="Buttons/Highscore" method="grab_click_focus"]
 [connection signal="mouse_entered" from="Buttons/Highscore" to="Buttons/Highscore" method="grab_focus"]
 [connection signal="pressed" from="Buttons/Highscore" to="." method="_on_highscore_button_pressed"]

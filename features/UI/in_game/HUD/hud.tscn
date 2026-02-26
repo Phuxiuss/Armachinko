@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://m51xnys15wid"]
+
+[ext_resource type="Texture2D" uid="uid://djeqho4k562mg" path="res://assets/2D/sprites/ui/2d_sprites/ui_score_banner.png" id="1_cfix5"]
+[ext_resource type="Script" uid="uid://42merqxldnfk" path="res://features/UI/in_game/HUD/hud.gd" id="1_mmeak"]
+[ext_resource type="FontFile" uid="uid://bvjdx0irlylr6" path="res://assets/2D/sprites/fonts/duality.otf" id="2_mmeak"]
+[ext_resource type="Texture2D" uid="uid://bu0fo7i30ygl3" path="res://assets/2D/sprites/ui/icons/ui_timer_icon.png" id="3_eacnk"]
+[ext_resource type="Texture2D" uid="uid://dqdf7kmov7wyg" path="res://assets/2D/sprites/ui/icons/ui_timer_icon_hand.png" id="4_70b0m"]
+[ext_resource type="FontFile" uid="uid://g78xifj7xv47" path="res://assets/2D/sprites/fonts/January Snack.otf" id="5_8pdbh"]
+[ext_resource type="PackedScene" uid="uid://b7njypkb0qrow" path="res://features/UI/in_game/HUD/timer.tscn" id="6_ase7x"]
+
+[node name="HUD" type="Control" unique_id=1999901698]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mmeak")
+
+[node name="ScoreDisplay" type="Control" parent="." unique_id=1982181345]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UiScoreBanner" type="Sprite2D" parent="ScoreDisplay" unique_id=1887848943]
+position = Vector2(581, 50)
+scale = Vector2(0.633333, 0.52)
+texture = ExtResource("1_cfix5")
+
+[node name="ScoreLabel" type="Label" parent="ScoreDisplay" unique_id=1220960989]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 499.0
+offset_top = 28.0
+offset_right = 645.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_mmeak")
+theme_override_font_sizes/font_size = 40
+text = "Bounty: 0$"
+
+[node name="Countdown" type="Control" parent="." unique_id=1113623817]
+anchors_preset = 0
+offset_left = 528.0
+offset_top = 95.0
+offset_right = 697.0
+offset_bottom = 126.0
+
+[node name="CountdownTimer" type="Timer" parent="Countdown" unique_id=118732900]
+one_shot = true
+
+[node name="UiIconTimerGreenGlow" type="Sprite2D" parent="Countdown" unique_id=1599405533]
+visible = false
+position = Vector2(20, 22)
+scale = Vector2(0.169688, 0.16875)
+texture = ExtResource("3_eacnk")
+
+[node name="UiTimerIconHand" type="Sprite2D" parent="Countdown/UiIconTimerGreenGlow" unique_id=1402302563]
+texture = ExtResource("4_70b0m")
+
+[node name="CountdownLabel" type="Label" parent="Countdown/UiIconTimerGreenGlow" unique_id=344895804]
+offset_left = 163.412
+offset_top = -119.852
+offset_right = 611.412
+offset_bottom = 153.148
+pivot_offset = Vector2(224, 136)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("5_8pdbh")
+theme_override_font_sizes/font_size = 200
+text = "189s"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" parent="Countdown" unique_id=669572529 instance=ExtResource("6_ase7x")]
+
+[node name="AnimationPlayer" parent="Countdown/Timer" index="0"]
+autoplay = &"timer_pop_up"
+
+[node name="UiIconTimerGreenGlow" parent="Countdown/Timer" index="1"]
+position = Vector2(22, 26)
+
+[editable path="Countdown/Timer"]

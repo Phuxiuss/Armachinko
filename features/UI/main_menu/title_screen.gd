@@ -1,7 +1,6 @@
 extends Control
 
 @export var gameLevel: PackedScene
-@export var animationPlayer: AnimationPlayer
 @export var backgroundOverlay: ColorRect
 @export var buttonsParent : Control
 
@@ -27,15 +26,19 @@ func _setup_ui_state() -> void:
 		$Buttons/Start.grab_focus()
 
 func _on_tab_opened() -> void:
-	backgroundOverlay.show()
-	buttonsParent.hide()
+	if backgroundOverlay:
+		backgroundOverlay.show()
+	if buttonsParent:
+		buttonsParent.hide()
 	%NewHighscoreEntry.deactivate()
 
 func load_game() -> void:
 	get_tree().change_scene_to_packed(gameLevel)
 
 func _on_tab_closed() -> void:
-	backgroundOverlay.hide()
-	buttonsParent.show()
+	if backgroundOverlay:
+		backgroundOverlay.hide()
+	if buttonsParent:
+		buttonsParent.show()
 	if last_focused_node:
 		last_focused_node.grab_focus()

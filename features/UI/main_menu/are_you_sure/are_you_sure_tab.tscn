@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d3x0kmfb7er5t" path="res://assets/2D/sprites/ui/2d_sprites/ui_pause_score_screen.png" id="1_y523y"]
 [ext_resource type="Script" uid="uid://clfbh6nv676ol" path="res://features/UI/main_menu/are_you_sure/are_you_sure_tab.gd" id="2_qmdsu"]
 [ext_resource type="FontFile" uid="uid://g78xifj7xv47" path="res://assets/2D/sprites/fonts/January Snack.otf" id="3_6nl27"]
+[ext_resource type="PackedScene" uid="uid://b3m1rq41qbrhr" path="res://features/UI/main_menu/title_screen.tscn" id="3_yp6y1"]
 [ext_resource type="Texture2D" uid="uid://dl48a451o4p2d" path="res://assets/2D/sprites/ui/buttons/ui_button_start_hover_flipped.png" id="4_vq7y5"]
 [ext_resource type="Texture2D" uid="uid://cc0i3p6k66u82" path="res://assets/2D/sprites/ui/buttons/ui_button_start_pressed_flipped.png" id="5_dm5ia"]
 [ext_resource type="Texture2D" uid="uid://crur5r1gwwr8l" path="res://assets/2D/sprites/ui/buttons/ui_button_start_flipped.png" id="6_axepy"]
@@ -141,6 +142,7 @@ focus_previous = NodePath("Quit")
 texture = ExtResource("1_y523y")
 expand_mode = 1
 script = ExtResource("2_qmdsu")
+loadSceneWhenQuitting = ExtResource("3_yp6y1")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="Label" type="Label" parent="." unique_id=1571066825]
