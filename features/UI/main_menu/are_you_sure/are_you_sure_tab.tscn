@@ -204,5 +204,4 @@ libraries/ = SubResource("AnimationLibrary_1tevx")
 [connection signal="mouse_entered" from="Quit" to="Quit" method="grab_focus" flags=3]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="mouse_entered" from="Back" to="Back" method="grab_focus" flags=3]
-[connection signal="pressed" from="Back" to="." method="close"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

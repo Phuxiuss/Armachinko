@@ -110,14 +110,6 @@ process_mode = 3
 script = ExtResource("1_ajqhr")
 title_screen = ExtResource("2_4dn46")
 
-[node name="Backround" type="ColorRect" parent="." unique_id=990970691]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.184314, 0.129412, 0.109804, 0.901961)
-
 [node name="Vignette" parent="." unique_id=2018891538 instance=ExtResource("2_efqj2")]
 visible = false
 
@@ -129,6 +121,7 @@ offset_right = 0.0
 offset_bottom = -656.0
 
 [node name="PauseMenu" parent="." unique_id=916580023 instance=ExtResource("5_w5ntm")]
+visible = false
 
 [node name="TutorialOverlay" parent="." unique_id=41919651 instance=ExtResource("5_g4nle")]
 visible = false
@@ -246,4 +239,6 @@ music_player = NodePath("../BackgroundMusicPlayer")
 [connection signal="tutorial_dismissed" from="TutorialOverlay" to="." method="on_tutorial_dismissed"]
 [connection signal="timeout" from="HUD/Countdown/CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 
+[editable path="PauseMenu"]
+[editable path="PauseMenu/SettingsTab"]
 [editable path="HUD/Countdown/Timer"]

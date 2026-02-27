@@ -45,12 +45,14 @@ func _ready():
 	$TutorialMusicPlayer.play()
 	$TutorialOverlay.show()
 	get_tree().paused = true 
+	
+	pause_menu.continued.connect(_on_continue_button_pressed)
+	
 	if  avalanche_event:
 		$TumbleweedCounter.threshold = avalanche_event.threshold
 	else:
 		push_error("Remember to set avalanche event so tumbleweed counter knows threshold")
-		
-		
+
 #__________________Pause_Tab___________________#
 
 func start_game():
@@ -72,7 +74,7 @@ func on_tutorial_dismissed():
 func update_pause_menu():
 	if game_running:
 		if Input.is_action_just_pressed("pause_button") and not get_tree().paused:
-			pause_menu.open()
+			pause_menu.show()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			hud.hide()
 			opened_tab = true
@@ -81,7 +83,6 @@ func update_pause_menu():
 
 
 func _on_continue_button_pressed() -> void:
-	pause_menu.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	opened_tab = false
 	get_tree().paused = false
@@ -147,11 +148,6 @@ func _on_player_forward_score_changed(new_value : Variant) -> void:
 #__________________Countdown_Timer___________________#
 
 func _process(_delta: float) -> void:
-	if opened_tab:
-		$Backround.show()
-	else:
-		$Backround.hide()
-
 	update_pause_menu()
 	countdown_label.text = str(snapped(countdown_timer.time_left, 1))
 
@@ -215,7 +211,6 @@ func _on_coin_milestone_progress_changed() -> void:
 
 func _on_enemy_milestone_progress_changed() -> void:
 	$EnemyCounter.on_collected()
-
 
 func _on_cactus_bumper_milestone_progress_changed() -> void:
 	$CactusPinCounter.on_collected()

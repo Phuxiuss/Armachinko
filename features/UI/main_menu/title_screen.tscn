@@ -413,10 +413,10 @@ _data = {
 [node name="TitleScreen" type="Control" unique_id=1652629495 node_paths=PackedStringArray("backgroundOverlay", "buttonsParent")]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 17.0
-offset_top = -1.0
-offset_right = 17.0
-offset_bottom = -1.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = -3.0
 script = ExtResource("1_p58nm")
 gameLevel = ExtResource("2_kwlkc")
 backgroundOverlay = NodePath("TransparentBackground")
@@ -645,7 +645,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="HighscoreTab" parent="Tabs" unique_id=2008840978 instance=ExtResource("21_32g52")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 10.0
@@ -659,7 +658,6 @@ scroll_speed = 600.0
 stream = ExtResource("28_wu7pe")
 
 [node name="SettingsTab" parent="Tabs" unique_id=1723131927 instance=ExtResource("20_yx5ho")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = -14.0
@@ -668,7 +666,6 @@ offset_right = 1157.0
 offset_bottom = 639.0
 
 [node name="CreditsTab" parent="Tabs" unique_id=2143456399 instance=ExtResource("22_okf48")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 568.748
@@ -678,7 +675,6 @@ offset_bottom = 766.833
 pivot_offset = Vector2(0.078125, 309.597)
 
 [node name="AreYouSureTab" parent="Tabs" unique_id=2023402300 instance=ExtResource("23_ogqmd")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 170.0
@@ -686,9 +682,9 @@ offset_top = 80.0
 offset_right = 940.0
 offset_bottom = 579.0
 size_flags_horizontal = 4
+loadSceneWhenQuitting = null
 
 [node name="EnterNameTab" parent="Tabs" unique_id=1906780269 instance=ExtResource("24_hg5me")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = -287.0

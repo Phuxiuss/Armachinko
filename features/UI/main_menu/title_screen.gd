@@ -10,9 +10,10 @@ func _ready() -> void:
 	PlayerData.setup()
 	_setup_ui_state()
 
-	for tab in [%AreYouSureTab, %CreditsTab, %SettingsTab, %CreditsTab, %HighscoreTab, %EnterNameTab]:
-		tab.opened.connect(_on_tab_opened)
-		tab.closed.connect(_on_tab_closed)
+	for tab in $Tabs.get_children():
+		if tab is BaseMenuTab:
+			tab.opened.connect(_on_tab_opened)
+			tab.closed.connect(_on_tab_closed)
 
 func _setup_ui_state() -> void:
 	if not PlayerData.first_time_playing:
