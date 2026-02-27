@@ -1,3 +1,4 @@
+# THIS CODE WAS CO-DEVELOPED
 extends CanvasLayer
 
 @export var title_screen : PackedScene
@@ -14,7 +15,6 @@ var show_once = false # let the animation_play play the game_over screen once
 var opened_tab = false # if for example settings is opened
 var score : int
 var game_running = false # player is alive and can open pause menu.
-#TODO: replace with game states: TUTORIAL -> GAME_PLAYING -> GAME_PAUSE -> GAME_OVER
 
 @onready var animation_player = $AnimationPlayer
 @onready var score_label = $HUD/ScoreDisplay/ScoreLabel
